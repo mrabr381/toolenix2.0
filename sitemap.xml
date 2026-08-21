@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Static pages -->
+  <url><loc>https://toolenix.example.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://toolenix.example.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://toolenix.example.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://toolenix.example.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://toolenix.example.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- PDF Tools -->
+  <url><loc>https://toolenix.example.com/pdf/merge-pdf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/split-pdf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/compress-pdf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/pdf-to-word.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/word-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/pdf-to-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/excel-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/pdf-to-ppt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/ppt-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/pdf-to-jpg.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/jpg-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/png-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/html-to-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/ocr-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/searchable-pdf.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/protect-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/unlock-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/rotate-pdf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/delete-pdf-pages.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolenix.example.com/pdf/extract-pdf-pages.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Utility Tools -->
+  <url><loc>https://toolenix.example.com/utilities/image-compressor.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/image-resizer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/image-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/background-remover.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/qr-code-generator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/password-checker.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/word-counter.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/character-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/case-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/json-formatter.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/json-validator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/base64-tool.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/url-encoder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/hash-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/uuid-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/html-minifier.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/css-minifier.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/meta-tag-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolenix.example.com/utilities/robots-txt.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

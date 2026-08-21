@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | Toolenix</title>
+<meta name="description" content="The page you're looking for doesn't exist. Browse Toolenix's 40+ free online tools instead.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://toolenix.example.com/404.html">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="assets/js/theme.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<div class="page-wrapper">
+<main id="main-content">
+  <section class="section bg-hero" style="min-height:70vh;display:flex;align-items:center;">
+    <div class="container text-center">
+      <div style="font-size:clamp(5rem,15vw,9rem);font-weight:800;line-height:1;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.04em;">
+        404
+      </div>
+      <h1 class="section-title" style="margin-top:var(--space-4);">Page not found</h1>
+      <p class="section-desc" style="margin-inline:auto;margin-bottom:var(--space-10);">
+        The page you're looking for might have been moved or doesn't exist. Let's get you back to something useful.
+      </p>
+      <div class="flex-center gap-4" style="flex-wrap:wrap;">
+        <a href="index.html" class="btn btn--primary btn--lg">Back to Homepage</a>
+        <button id="open-search-404" class="btn btn--secondary btn--lg">Search Tools</button>
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+  document.getElementById('open-search-404')?.addEventListener('click', () => {
+    document.getElementById('search-trigger')?.click();
+  });
+</script>
+</body>
+</html>

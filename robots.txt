@@ -1,0 +1,6 @@
+# robots.txt — Toolenix
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+Sitemap: https://toolenix.example.com/sitemap.xml

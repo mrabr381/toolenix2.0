@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Toolenix — Get in Touch</title>
+<meta name="description" content="Contact the Toolenix team for feedback, bug reports, or feature suggestions.">
+<link rel="canonical" href="https://toolenix.example.com/contact.html">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="assets/js/theme.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+  <section class="bg-hero" style="padding-block:var(--space-20);">
+    <div class="container text-center">
+      <div class="section-label" style="justify-content:center;">Contact</div>
+      <h1 class="section-title">Get in <span>touch</span></h1>
+      <p class="section-desc" style="margin-inline:auto;">Found a bug? Have a feature request? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+      <div class="tool-interface__panel" data-animate="fade-up">
+        <form id="contact-form" onsubmit="return false;" novalidate>
+          <div class="input-group">
+            <label class="input-label" for="c-name">Your Name</label>
+            <input type="text" id="c-name" class="input-field" placeholder="Ali Hassan" autocomplete="name" required>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="c-email">Email Address</label>
+            <input type="email" id="c-email" class="input-field" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="c-subject">Subject</label>
+            <select id="c-subject" class="input-field">
+              <option value="">Select a topic…</option>
+              <option>Bug report</option>
+              <option>Feature request</option>
+              <option>General feedback</option>
+              <option>Business enquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="c-message">Message</label>
+            <textarea id="c-message" class="input-field textarea-field" placeholder="Tell us what's on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+document.getElementById('contact-form')?.addEventListener('submit', e => {
+  e.preventDefault();
+  window.Toolenix?.Toast.show('Message sent! We\'ll reply within 48 hours.', 'success');
+  e.target.reset();
+});
+</script>
+</body>
+</html>
