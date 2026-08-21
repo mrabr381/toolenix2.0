@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Searchable PDF Online Free — Make PDF Text Searchable | Toolenix</title>
+<meta name="description" content="Make scanned PDFs searchable by adding an invisible OCR text layer. Free, browser-based, no signup required.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/searchable-pdf.html">
+<meta property="og:title" content="Searchable PDF Online Free — Make PDF Text Searchable | Toolenix">
+<meta property="og:description" content="Make scanned PDFs searchable by adding an invisible OCR text layer. Free, browser-based, no signup required.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Searchable PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item"><a href="../index.html#popular-tools">PDF Tools</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Searchable PDF</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">PDF Tools</div>
+        <h1 class="tool-hero__title">Searchable PDF</h1>
+        <p class="tool-hero__desc">Add a searchable text layer to scanned PDFs using OCR. The scanned appearance is preserved — text becomes copyable and searchable.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0" aria-label="Upload PDF">
+    <input type="file" id="file-input" class="upload-area__input" accept=".pdf" aria-label="Select PDF">
+    <div class="upload-area__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    </div>
+    <div class="upload-area__title">Drop your PDF here</div>
+    <p class="upload-area__hint">or click to browse</p>
+    <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+  </div>
+  <div id="options-section" style="display:none;margin-top:var(--space-5);">
+    <div class="file-item">
+      <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+    </div>
+    
+    <div class="callout" style="margin-top:var(--space-4);">
+      <p>Uses PDF.js + Tesseract.js + pdf-lib. First run downloads Tesseract language data (~9MB). Processing is slower for multi-page PDFs.</p>
+    </div>
+    <div class="tool-controls tool-controls--end" style="margin-top:var(--space-5);">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="action-btn">Make Searchable</button>
+    </div>
+  </div>
+</div>
+<div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+  <div class="tool-loading"><div class="spinner"></div>
+    <div class="progress-wrap" style="max-width:400px;width:100%;">
+      <div class="progress-header"><span class="progress-label" id="progress-label">Processing…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;">
+  <div class="result-area">
+    <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="result-area__title">Done!</div>
+    <p class="result-area__desc" id="result-desc"></p>
+    <div class="result-area__actions">
+      <a id="download-btn" class="btn btn--primary btn--lg" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>
+      <button class="btn btn--secondary" id="reset-btn">Process Another</button>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+      
+    <h2>What is a searchable PDF?</h2>
+    <p>A searchable PDF has two layers: the visible scan image, and an invisible text layer underneath generated by OCR. When you Ctrl+F to search, use copy-paste, or run accessibility tools, they interact with the text layer — not the image. The document looks identical to the original scan.</p>
+    <h2>How this tool works</h2>
+    <p>Toolenix renders each PDF page as an image using PDF.js, runs Tesseract.js OCR on each page, and uses pdf-lib to embed the extracted text as an invisible layer behind the original page content. The result is a PDF that looks like your scan but is fully searchable.</p>
+    <div class="callout">
+      <p>Processing time scales with the number of pages. Multi-page PDFs may take several minutes. The browser tab must stay open during processing.</p>
+    </div>
+  
+    </div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools">
+        <a href="ocr-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">OCR PDF</span></a><a href="compress-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Compress PDF</span></a><a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+(function(){
+  const uploadArea=document.getElementById('upload-area'),
+    fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),
+    fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    actionBtn=document.getElementById('action-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),
+    uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),
+    downloadBtn=document.getElementById('download-btn'),
+    resetBtn=document.getElementById('reset-btn'),
+    progressFill=document.getElementById('progress-fill'),
+    progressPct=document.getElementById('progress-pct'),
+    progressLabel=document.getElementById('progress-label'),
+    resultDesc=document.getElementById('result-desc');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setP(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function onFile(file){
+    if(!file||(!file.name.endsWith('.pdf')&&file.type!=='application/pdf')){window.Toolenix?.Toast.show('Please select a PDF file.','warning');return;}
+    currentFile=file;fname.textContent=file.name;fmeta.textContent=fmt(file.size);optionsSec.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>onFile(f[0])});
+  fileInput.addEventListener('change',()=>{onFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';});
+  
+  actionBtn.addEventListener('click',async()=>{
+    if(!currentFile)return;
+    uploadSec.style.display='none';progressSec.style.display='block';setP(5,'Loading PDF…');
+    try{
+      
+    const {PDFDocument,rgb}=PDFLib;
+    if(typeof pdfjsLib!=='undefined') pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    const buf=await currentFile.arrayBuffer();
+    const pdfDoc=await PDFDocument.load(buf);
+    const pdfJsDoc=await pdfjsLib.getDocument({data:buf.slice(0)}).promise;
+    const totalPages=pdfJsDoc.numPages;
+    const {createWorker}=Tesseract;
+    const worker=await createWorker('eng');
+    for(let i=1;i<=totalPages;i++){
+      setP(Math.round(10+80*(i/totalPages)),`OCR page ${i} of ${totalPages}…`);
+      const pg=await pdfJsDoc.getPage(i);
+      const vp=pg.getViewport({scale:2});
+      const canvas=document.createElement('canvas');
+      canvas.width=vp.width;canvas.height=vp.height;
+      await pg.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+      const {data:{words}}=await worker.recognize(canvas);
+      const pdfPage=pdfDoc.getPage(i-1);
+      const {width:pw,height:ph}=pdfPage.getSize();
+      const scaleX=pw/vp.width,scaleY=ph/vp.height;
+      words.forEach(w=>{
+        if(!w.text.trim())return;
+        const x=w.bbox.x0*scaleX;
+        const y=ph-w.bbox.y1*scaleY;
+        pdfPage.drawText(w.text,{x,y,size:10,color:rgb(1,1,1),opacity:0});
+      });
+    }
+    await worker.terminate();
+    setP(95,'Saving…');
+    const bytes=await pdfDoc.save();
+    downloadBtn.href=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));
+    downloadBtn.download='searchable.pdf';
+    resultDesc.textContent=`${totalPages} page${totalPages>1?'s':''} made searchable`;
+    setP(100,'Done!');progressSec.style.display='none';resultSec.style.display='block';
+    window.Toolenix?.Toast.show('Searchable PDF ready!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();</script>
+</body>
+</html>

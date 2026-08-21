@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unlock PDF Online Free — Remove PDF Password | Toolenix</title>
+<meta name="description" content="Remove password protection from a PDF you own. Free, browser-based PDF unlocker. No signup, no upload.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/unlock-pdf.html">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Unlock PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/responsive.css"><link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper"><main id="main-content">
+<div class="tool-hero"><div class="container">
+  <nav class="breadcrumb"><div class="breadcrumb__item"><a href="../index.html">Home</a></div><svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><div class="breadcrumb__item current">Unlock PDF</div></nav>
+  <div class="tool-hero__inner">
+    <div class="tool-hero__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+    <div class="tool-hero__content">
+      <div class="tool-hero__label">PDF Tools</div>
+      <h1 class="tool-hero__title">Unlock PDF</h1>
+      <p class="tool-hero__desc">Remove a password from a PDF you have the right to unlock. Enter the password and download a protection-free copy instantly.</p>
+      <div class="tool-hero__tags"><span class="badge badge--success">Free</span><span class="badge badge--primary">No signup</span></div>
+    </div>
+  </div>
+</div></div>
+<div class="tool-interface"><div class="container"><div class="tool-interface__panel">
+  <div id="upload-section">
+    <div class="upload-area" id="upload-area" role="button" tabindex="0">
+      <input type="file" id="file-input" class="upload-area__input" accept=".pdf">
+      <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <div class="upload-area__title">Drop your PDF here</div>
+      <p class="upload-area__hint">or click to browse</p>
+      <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+    </div>
+    <div id="options-section" style="display:none;margin-top:var(--space-5);">
+      <div class="file-item">
+        <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+      </div>
+      <div id="extra-options"><div class="tool-settings" style="margin-top:var(--space-5);"><div class="tool-settings__field"><label class="tool-settings__label" for="pdf-pwd">PDF Password</label><input type="password" id="pdf-pwd" class="tool-settings__input" placeholder="Enter the PDF password…"></div></div></div>
+      <div class="tool-controls tool-controls--end" style="margin-top:var(--space-5);">
+        <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+        <button class="btn btn--primary" id="action-btn">Process PDF</button>
+      </div>
+    </div>
+  </div>
+  <div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+    <div class="tool-loading"><div class="spinner"></div>
+      <div class="progress-wrap" style="max-width:400px;width:100%;">
+        <div class="progress-header"><span class="progress-label" id="progress-label">Processing…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+        <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+  <div id="result-section" style="display:none;">
+    <div class="result-area">
+      <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="result-area__title">Done!</div>
+      <p class="result-area__desc" id="result-desc"></p>
+      <div class="result-area__actions">
+        <a id="download-btn" class="btn btn--primary btn--lg" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </a>
+        <button class="btn btn--secondary" id="reset-btn">Process Another</button>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+<section class="section section--sm"><div class="container"><div class="tool-content">
+  <h2>When is it legal to unlock a PDF?</h2>
+  <p>You can legally unlock a PDF when you own the document or have explicit permission from the owner. Common legitimate cases: you forgot the password to your own file, or an organisation sent you a protected file with the password and you want a working copy for internal use.</p><div class='callout callout--warning'><p><strong>Important:</strong> Toolenix only processes files with the password you provide. We cannot brute-force or bypass encryption — you must know the password. Only unlock files you own or have explicit authorisation to unlock.</p></div>
+</div>
+<div style="margin-top:var(--space-10);">
+  <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+  <div class="related-tools"><a href="protect-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Protect PDF</span></a><a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a><a href="compress-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Compress PDF</span></a></div>
+</div></div></section>
+</main></div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script><script src="../assets/js/navigation.js"></script><script src="../assets/js/footer.js"></script><script src="../assets/js/search.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    actionBtn=document.getElementById('action-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),downloadBtn=document.getElementById('download-btn'),
+    resetBtn=document.getElementById('reset-btn'),progressFill=document.getElementById('progress-fill'),
+    progressPct=document.getElementById('progress-pct'),progressLabel=document.getElementById('progress-label'),
+    resultDesc=document.getElementById('result-desc');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setProgress(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function handleFile(file){
+    if(!file||!file.name.endsWith('.pdf')){window.Toolenix?.Toast.show('Please select a PDF.','warning');return;}
+    currentFile=file;fname.textContent=file.name;fmeta.textContent=fmt(file.size);optionsSec.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>handleFile(f[0])});
+  fileInput.addEventListener('change',()=>{handleFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';});
+  actionBtn.textContent='Unlock PDF';
+  actionBtn.addEventListener('click',async()=>{
+    if(!currentFile)return;
+    uploadSec.style.display='none';progressSec.style.display='block';setProgress(10,'Loading…');
+    try{
+      
+      const {PDFDocument}=PDFLib;
+      const pwd=document.getElementById('pdf-pwd').value;
+      const buf=await currentFile.arrayBuffer();
+      setProgress(40,'Decrypting…');
+      let doc;
+      try{doc=await PDFDocument.load(buf,{password:pwd});}
+      catch(e){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Incorrect password.','error');return;}
+      setProgress(80,'Saving…');
+      const bytes=await doc.save();
+      const blob=new Blob([bytes],{type:'application/pdf'});
+      downloadBtn.href=URL.createObjectURL(blob);downloadBtn.download='unlocked.pdf';
+      resultDesc.textContent='Password removed. Download your unlocked PDF.';
+      setProgress(100,'Done!');progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('PDF unlocked!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();
+</script>
+</body></html>

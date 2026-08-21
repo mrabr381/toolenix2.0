@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter Online Free — Beautify and Format JSON | Toolenix</title>
+<meta name="description" content="Format and beautify raw JSON with customisable indentation, minification and key sorting. Free browser-based JSON formatter. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/json-formatter.html">
+<meta property="og:title" content="JSON Formatter Online Free — Beautify and Format JSON | Toolenix">
+<meta property="og:description" content="Format and beautify raw JSON with customisable indentation, minification and key sorting. Free browser-based JSON formatter. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Formatter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">JSON Formatter</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">JSON Formatter</h1>
+        <p class="tool-hero__desc">Beautify raw JSON instantly. Supports custom indentation, minification, alphabetical key sorting, and real-time error detection.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-5);align-items:start;">
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="json-input">Input JSON</label>
+      <button class="btn btn--ghost btn--sm" id="paste-btn" aria-label="Paste from clipboard">Paste</button>
+    </div>
+    <textarea id="json-input" class="input-field textarea-field" style="min-height:360px;font-family:'Fira Code',monospace;font-size:0.82rem;" placeholder='{"name":"Toolenix","tools":40,"free":true}' aria-label="JSON input"></textarea>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="json-output">Formatted Output</label>
+      <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy output">Copy</button>
+    </div>
+    <textarea id="json-output" class="input-field textarea-field" style="min-height:360px;font-family:'Fira Code',monospace;font-size:0.82rem;" readonly placeholder="Formatted JSON appears here…" aria-label="Formatted JSON output" aria-live="polite"></textarea>
+  </div>
+</div>
+<div class="tool-controls tool-controls--between" style="margin-top:var(--space-4);">
+  <div style="display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap;">
+    <div>
+      <label class="input-label" for="indent" style="display:inline;margin-right:8px;font-size:var(--text-sm);">Indent</label>
+      <select id="indent" class="tool-settings__select" style="width:auto;display:inline-block;">
+        <option value="2" selected>2 spaces</option>
+        <option value="4">4 spaces</option>
+        <option value="tab">Tab</option>
+      </select>
+    </div>
+    <label class="checkbox-item">
+      <input type="checkbox" id="sort-keys" aria-label="Sort keys alphabetically">
+      <span class="checkbox-item__label">Sort keys</span>
+    </label>
+  </div>
+  <div style="display:flex;gap:var(--space-2);">
+    <button class="btn btn--ghost btn--sm" id="minify-btn">Minify</button>
+    <button class="btn btn--primary" id="format-btn">Format JSON</button>
+  </div>
+</div>
+<div id="error-msg" role="alert" aria-live="assertive" style="display:none;margin-top:var(--space-3);padding:var(--space-3) var(--space-4);background:rgba(239,68,68,0.08);border-left:3px solid var(--clr-danger);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--clr-danger);font-family:'Fira Code',monospace;"></div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>JSON formatting conventions</h2>
+<ul>
+  <li><strong>2-space indent</strong> — default in the JavaScript ecosystem. Used by ESLint, Prettier, npm's package.json, and most JS/TS projects.</li>
+  <li><strong>4-space indent</strong> — common in Python (PEP 8) and Java ecosystems. Also used in many REST API documentation examples.</li>
+  <li><strong>Tab indent</strong> — configurable per-editor, preferred in some Go and PHP codebases. Tab width is a display setting, not a file property.</li>
+</ul>
+<h2>Common JSON syntax errors</h2>
+<ul>
+  <li><strong>Trailing commas</strong> — <code>{"a":1,}</code> is invalid. Remove the comma after the last item in any object or array.</li>
+  <li><strong>Single quotes</strong> — JSON requires double quotes. <code>{'key':'value'}</code> is invalid.</li>
+  <li><strong>Unquoted keys</strong> — <code>{key:"value"}</code> is JavaScript object syntax, not JSON.</li>
+  <li><strong>Comments</strong> — standard JSON has no comment syntax. Use JSONC or JSON5 if you need comments.</li>
+  <li><strong>Undefined/NaN/Infinity</strong> — these JavaScript values are not valid JSON literals.</li>
+</ul>
+<h2>Key sorting</h2>
+<p>Sorting keys alphabetically is useful when diffing two JSON blobs to see what changed, when ensuring deterministic serialisation order, or when working with version-controlled JSON config files where key order changes create noisy diffs.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="json-validator.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Validator</span></a><a href="base64-tool.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Base64 Tool</span></a><a href="url-encoder.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">URL Encoder</span></a><a href="html-minifier.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">HTML Minifier</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const jsonInput=document.getElementById('json-input'),
+    jsonOutput=document.getElementById('json-output'),
+    formatBtn=document.getElementById('format-btn'),
+    minifyBtn=document.getElementById('minify-btn'),
+    copyBtn=document.getElementById('copy-btn'),
+    pasteBtn=document.getElementById('paste-btn'),
+    indentEl=document.getElementById('indent'),
+    sortKeysEl=document.getElementById('sort-keys'),
+    errorMsg=document.getElementById('error-msg');
+
+  function sortObj(obj){
+    if(Array.isArray(obj)) return obj.map(sortObj);
+    if(obj!==null && typeof obj==='object'){
+      return Object.keys(obj).sort().reduce((acc,k)=>{acc[k]=sortObj(obj[k]);return acc;},{});
+    }
+    return obj;
+  }
+
+  function clearError(){errorMsg.style.display='none';errorMsg.textContent='';}
+
+  function showError(msg){errorMsg.textContent=msg;errorMsg.style.display='block';}
+
+  function format(){
+    clearError();
+    const raw=jsonInput.value.trim();
+    if(!raw){jsonOutput.value='';return;}
+    try{
+      let parsed=JSON.parse(raw);
+      if(sortKeysEl.checked) parsed=sortObj(parsed);
+      const indent=indentEl.value==='tab'?'	':parseInt(indentEl.value);
+      jsonOutput.value=JSON.stringify(parsed,null,indent);
+    }catch(e){showError('Parse error: '+e.message);jsonOutput.value='';}
+  }
+
+  function minify(){
+    clearError();
+    const raw=jsonInput.value.trim();
+    if(!raw) return;
+    try{jsonOutput.value=JSON.stringify(JSON.parse(raw));}
+    catch(e){showError('Parse error: '+e.message);}
+  }
+
+  formatBtn.addEventListener('click',format);
+  minifyBtn.addEventListener('click',minify);
+
+  let debounce;
+  jsonInput.addEventListener('input',()=>{
+    clearTimeout(debounce);
+    debounce=setTimeout(()=>{if(jsonInput.value.trim()) format();},300);
+  });
+
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(jsonOutput.value,copyBtn));
+
+  pasteBtn.addEventListener('click',async()=>{
+    try{
+      const t=await navigator.clipboard.readText();
+      jsonInput.value=t;
+      format();
+    }catch{window.Toolenix?.Toast.show('Clipboard access denied — paste manually.','warning');}
+  });
+
+})();
+</script>
+</body>
+</html>

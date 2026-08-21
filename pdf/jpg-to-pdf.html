@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JPG to PDF Online Free — Convert JPG Images to PDF | Toolenix</title>
+<meta name="description" content="Convert JPG images to PDF online. Combine multiple JPGs into one PDF file. Free, browser-based, no signup required.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/jpg-to-pdf.html">
+<meta property="og:title" content="JPG to PDF Online Free — Convert JPG Images to PDF | Toolenix">
+<meta property="og:description" content="Convert JPG images to PDF online. Combine multiple JPGs into one PDF file. Free, browser-based, no signup required.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JPG to PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item"><a href="../index.html#popular-tools">PDF Tools</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">JPG to PDF</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">PDF Tools</div>
+        <h1 class="tool-hero__title">JPG to PDF</h1>
+        <p class="tool-hero__desc">Convert one or multiple JPG images into a PDF document. Drag and drop your images, set the order, and download your PDF instantly.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0">
+    <input type="file" id="file-input" class="upload-area__input" accept="image/jpeg,image/jpg,.jpg,.jpeg" multiple>
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop JPG images here</div>
+    <p class="upload-area__hint">Select multiple images — drag to reorder</p>
+    <div class="upload-area__formats"><span class="badge badge--primary">JPG</span><span class="badge badge--primary">JPEG</span></div>
+  </div>
+  <div id="file-list" class="file-list" style="margin-top:var(--space-4);"></div>
+  <div class="tool-controls tool-controls--end" id="controls" style="display:none;">
+    <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+    <button class="btn btn--primary" id="convert-btn">Convert to PDF</button>
+  </div>
+</div>
+<div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+  <div class="tool-loading"><div class="spinner"></div><p class="tool-loading__text" id="progress-label">Converting…</p></div>
+</div>
+<div id="result-section" style="display:none;">
+  <div class="result-area">
+    <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="result-area__title">PDF created!</div>
+    <p class="result-area__desc" id="result-desc"></p>
+    <div class="result-area__actions">
+      <a id="download-btn" class="btn btn--primary btn--lg" download="images.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+      <button class="btn btn--secondary" id="reset-btn">Convert More</button>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+      
+    <h2>How JPG to PDF conversion works</h2>
+    <p>Each JPG you upload is embedded into a PDF page sized to match the image dimensions. Multiple images are combined in order, one per page. No quality loss occurs — the original JPEG data is embedded directly into the PDF structure using pdf-lib.</p>
+    <h2>Common use cases</h2>
+    <ul>
+      <li>Converting phone photos of documents into a shareable PDF</li>
+      <li>Combining multiple product photos into a single PDF catalogue</li>
+      <li>Creating a photo portfolio PDF</li>
+      <li>Submitting scanned documents as a single PDF file</li>
+    </ul>
+    <h2>Tips for best results</h2>
+    <ul>
+      <li>For document scans, shoot in good lighting for clean, readable output</li>
+      <li>Drag images into the correct order before converting</li>
+      <li>Use our <a href="compress-pdf.html" style="color:var(--clr-primary)">Compress PDF</a> tool after if the file size is too large</li>
+    </ul>
+  
+    </div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools">
+        <a href="png-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">PNG to PDF</span></a><a href="compress-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Compress PDF</span></a><a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a><a href="../utilities/image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    fileListEl=document.getElementById('file-list'),controls=document.getElementById('controls'),
+    convertBtn=document.getElementById('convert-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),downloadBtn=document.getElementById('download-btn'),
+    resetBtn=document.getElementById('reset-btn'),progressLabel=document.getElementById('progress-label'),
+    resultDesc=document.getElementById('result-desc');
+  let files=[];
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function renderList(){
+    fileListEl.innerHTML=files.map((f,i)=>`
+      <div class="file-item" draggable="true" data-idx="${i}">
+        <div class="file-item__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <div class="file-item__info"><div class="file-item__name">${f.name}</div><div class="file-item__meta">${fmt(f.size)}</div></div>
+        <button class="file-item__remove" data-remove="${i}" aria-label="Remove"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>`).join('');
+    fileListEl.querySelectorAll('[data-remove]').forEach(btn=>btn.addEventListener('click',()=>{files.splice(+btn.dataset.remove,1);renderList();if(!files.length)controls.style.display='none';}));
+    let dragIdx=null;
+    fileListEl.querySelectorAll('.file-item').forEach(item=>{
+      item.addEventListener('dragstart',()=>{dragIdx=+item.dataset.idx;item.style.opacity='0.5';});
+      item.addEventListener('dragend',()=>{item.style.opacity='1';});
+      item.addEventListener('dragover',e=>e.preventDefault());
+      item.addEventListener('drop',()=>{if(dragIdx===null)return;const t=+item.dataset.idx;const m=files.splice(dragIdx,1)[0];files.splice(t,0,m);renderList();});
+    });
+  }
+  function addFiles(newFiles){
+    const imgs=Array.from(newFiles).filter(f=>f.type.startsWith('image/'));
+    if(!imgs.length){window.Toolenix?.Toast.show('Please select JPG images.','warning');return;}
+    files=[...files,...imgs];renderList();controls.style.display='flex';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'image/jpeg,.jpg,.jpeg',multiple:true,onFiles:addFiles});
+  fileInput.addEventListener('change',()=>{addFiles(fileInput.files);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{files=[];renderList();controls.style.display='none';});
+  resetBtn.addEventListener('click',()=>{files=[];renderList();controls.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';});
+  convertBtn.addEventListener('click',async()=>{
+    if(!files.length)return;
+    uploadSec.style.display='none';progressSec.style.display='block';
+    try{
+      const {PDFDocument}=PDFLib;
+      const doc=await PDFDocument.create();
+      for(let i=0;i<files.length;i++){
+        progressLabel.textContent=`Embedding image ${i+1} of ${files.length}…`;
+        const buf=await files[i].arrayBuffer();
+        const img=await doc.embedJpg(buf);
+        const page=doc.addPage([img.width,img.height]);
+        page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
+      }
+      progressLabel.textContent='Saving PDF…';
+      const bytes=await doc.save();
+      const blob=new Blob([bytes],{type:'application/pdf'});
+      downloadBtn.href=URL.createObjectURL(blob);
+      resultDesc.textContent=`${files.length} image${files.length>1?'s':''} converted to PDF`;
+      progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('PDF created!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();</script>
+</body>
+</html>

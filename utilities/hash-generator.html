@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Generator Online Free — SHA-256 SHA-512 SHA-1 | Toolenix | Toolenix</title>
+<meta name="description" content="Generate SHA-256, SHA-512 and SHA-1 hashes from any text using the browser's Web Crypto API. Free, client-side hash generator. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/hash-generator.html">
+<meta property="og:title" content="Hash Generator Online Free — SHA-256 SHA-512 SHA-1 | Toolenix | Toolenix">
+<meta property="og:description" content="Generate SHA-256, SHA-512 and SHA-1 hashes from any text using the browser's Web Crypto API. Free, client-side hash generator. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hash Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Hash Generator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">Hash Generator</h1>
+        <p class="tool-hero__desc">Generate cryptographic hashes from text using the browser's native Web Crypto API. Supports SHA-256, SHA-512 and SHA-1. Fully client-side.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="input-group">
+  <label class="input-label" for="hash-input">Input text</label>
+  <textarea id="hash-input" class="input-field textarea-field" style="min-height:130px;" placeholder="Enter text to hash…" aria-label="Text to hash" aria-describedby="hash-hint"></textarea>
+  <p class="input-hint" id="hash-hint">Hashes update automatically as you type</p>
+</div>
+<div id="hash-results" style="display:flex;flex-direction:column;gap:var(--space-4);" aria-live="polite">
+  <div class="code-output" id="sha256-wrap" style="display:none;">
+    <div style="font-size:var(--text-xs);font-weight:700;color:var(--clr-text-3);margin-bottom:var(--space-2);letter-spacing:0.06em;">SHA-256</div>
+    <div id="sha256-out" style="word-break:break-all;font-family:'Fira Code',monospace;font-size:var(--text-sm);color:var(--clr-text);"></div>
+    <button class="code-output__copy" data-target="sha256-out" aria-label="Copy SHA-256 hash">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy
+    </button>
+  </div>
+  <div class="code-output" id="sha512-wrap" style="display:none;">
+    <div style="font-size:var(--text-xs);font-weight:700;color:var(--clr-text-3);margin-bottom:var(--space-2);letter-spacing:0.06em;">SHA-512</div>
+    <div id="sha512-out" style="word-break:break-all;font-family:'Fira Code',monospace;font-size:var(--text-sm);color:var(--clr-text);"></div>
+    <button class="code-output__copy" data-target="sha512-out" aria-label="Copy SHA-512 hash">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy
+    </button>
+  </div>
+  <div class="code-output" id="sha1-wrap" style="display:none;">
+    <div style="font-size:var(--text-xs);font-weight:700;color:var(--clr-text-3);margin-bottom:var(--space-2);letter-spacing:0.06em;">SHA-1 <span style="color:var(--clr-warning);font-weight:400;">(deprecated for security)</span></div>
+    <div id="sha1-out" style="word-break:break-all;font-family:'Fira Code',monospace;font-size:var(--text-sm);color:var(--clr-text);"></div>
+    <button class="code-output__copy" data-target="sha1-out" aria-label="Copy SHA-1 hash">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Hash algorithm comparison</h2>
+<ul>
+  <li><strong>SHA-256</strong> — 256-bit (64 hex character) output. Current standard for most security applications. Used in TLS certificates, code signing, Bitcoin, and most modern protocols. Use this by default.</li>
+  <li><strong>SHA-512</strong> — 512-bit (128 hex character) output. Larger output, stronger security margin. Marginally faster than SHA-256 on 64-bit processors. Use when the extra margin matters.</li>
+  <li><strong>SHA-1</strong> — 160-bit (40 hex character) output. Deprecated for security use since 2017 due to practical collision attacks. Still used in Git commit hashes and some legacy checksum scenarios — not for passwords, signatures, or certificates.</li>
+</ul>
+<h2>Hashing vs encryption</h2>
+<p>Hashing is one-way: you cannot reverse a hash to recover the original input. Encryption is two-way: data can be recovered with the correct key. Never use general-purpose hashes (SHA-256 etc.) for password storage — use purpose-built password hashing functions: bcrypt, Argon2, or PBKDF2. These include salting and intentional slowness to resist brute-force attacks.</p>
+<div class="callout">
+  <p>Toolenix uses <code>crypto.subtle.digest()</code> from the Web Crypto API — a native browser implementation, no third-party library required.</p>
+</div></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="uuid-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">UUID Generator</span></a><a href="base64-tool.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Base64 Tool</span></a><a href="password-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-util"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Password Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const hashInput=document.getElementById('hash-input');
+
+  async function hashText(algorithm, text){
+    const encoded=new TextEncoder().encode(text);
+    const hashBuf=await crypto.subtle.digest(algorithm, encoded);
+    return Array.from(new Uint8Array(hashBuf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+
+  async function updateHashes(){
+    const text=hashInput.value;
+    const show=text.length>0;
+    ['sha256','sha512','sha1'].forEach(k=>document.getElementById(k+'-wrap').style.display=show?'block':'none');
+    if(!show) return;
+    try{
+      const [s256,s512,s1]=await Promise.all([
+        hashText('SHA-256',text),
+        hashText('SHA-512',text),
+        hashText('SHA-1',text)
+      ]);
+      document.getElementById('sha256-out').textContent=s256;
+      document.getElementById('sha512-out').textContent=s512;
+      document.getElementById('sha1-out').textContent=s1;
+    }catch(e){console.error('Hash error:',e);}
+  }
+
+  document.querySelectorAll('.code-output__copy').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const text=document.getElementById(btn.dataset.target).textContent;
+      window.Toolenix?.copyToClipboard(text,btn);
+    });
+  });
+
+  let debounce;
+  hashInput.addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(updateHashes,200);});
+
+})();
+</script>
+</body>
+</html>

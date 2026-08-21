@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merge PDF Online Free — Combine PDF Files | Toolenix</title>
+<meta name="description" content="Merge multiple PDF files into one document instantly. Free, browser-based, no signup. Drag, reorder, and combine PDFs in seconds with Toolenix.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/merge-pdf.html">
+<meta property="og:title" content="Merge PDF Online Free | Toolenix">
+<meta property="og:description" content="Combine multiple PDF files into one document. Free, private, browser-based.">
+<meta property="og:url" content="https://toolenix.example.com/pdf/merge-pdf.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Merge PDF",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "url":"https://toolenix.example.com/pdf/merge-pdf.html",
+  "description":"Merge multiple PDF files into one document instantly in your browser."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+  <!-- Hero -->
+  <div class="tool-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+        <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="breadcrumb__item"><a href="../index.html#popular-tools">PDF Tools</a></div>
+        <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="breadcrumb__item current">Merge PDF</div>
+      </nav>
+      <div class="tool-hero__inner">
+        <div class="tool-hero__icon icon-pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="tool-hero__content">
+          <div class="tool-hero__label">PDF Tools</div>
+          <h1 class="tool-hero__title">Merge PDF</h1>
+          <p class="tool-hero__desc">Combine multiple PDF files into a single document. Drag to reorder, then merge instantly — all inside your browser, nothing uploaded to a server.</p>
+          <div class="tool-hero__tags">
+            <span class="badge badge--success">Free</span>
+            <span class="badge badge--primary">Browser-based</span>
+            <span class="badge badge--primary">No signup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool Interface -->
+  <div class="tool-interface">
+    <div class="container">
+      <div class="tool-interface__panel">
+
+        <!-- Upload -->
+        <div id="upload-section">
+          <div class="upload-area" id="upload-area" role="button" tabindex="0" aria-label="Upload PDF files">
+            <input type="file" id="file-input" class="upload-area__input" accept=".pdf" multiple aria-label="Select PDF files">
+            <div class="upload-area__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <div class="upload-area__title">Drop PDF files here</div>
+            <p class="upload-area__hint">or click to browse — select multiple files</p>
+            <div class="upload-area__formats">
+              <span class="badge badge--primary">PDF</span>
+            </div>
+          </div>
+
+          <!-- File list -->
+          <div id="file-list" class="file-list" aria-live="polite"></div>
+
+          <!-- Controls -->
+          <div class="tool-controls tool-controls--between" id="controls" style="display:none;">
+            <button class="btn btn--ghost btn--sm" id="add-more-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add More
+            </button>
+            <div class="flex gap-3">
+              <button class="btn btn--ghost btn--sm" id="clear-btn">Clear All</button>
+              <button class="btn btn--primary" id="merge-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                Merge PDFs
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+          <div class="tool-loading">
+            <div class="spinner"></div>
+            <div class="progress-wrap" style="max-width:400px;width:100%;">
+              <div class="progress-header">
+                <span class="progress-label" id="progress-label">Merging PDFs…</span>
+                <span class="progress-pct" id="progress-pct">0%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div id="result-section" style="display:none;">
+          <div class="result-area">
+            <div class="result-area__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="result-area__title">PDFs merged successfully!</div>
+            <p class="result-area__desc" id="result-desc"></p>
+            <div class="result-area__actions">
+              <a id="download-btn" class="btn btn--primary btn--lg" download="merged.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Merged PDF
+              </a>
+              <button class="btn btn--secondary" id="reset-btn">Merge Another</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO Content -->
+  <section class="section section--sm">
+    <div class="container">
+      <div class="tool-content">
+
+        <h2>What is a PDF merger?</h2>
+        <p>A PDF merger is a tool that combines two or more separate PDF files into a single, unified document. Instead of sharing a dozen individual files, you send one clean PDF. Instead of printing multiple documents, you print one. Merging PDFs is one of the most common document tasks in any workflow — and Toolenix makes it free and instant.</p>
+
+        <h2>How to merge PDF files</h2>
+        <div class="step-cards">
+          <div class="step-card">
+            <div class="step-card__num">1</div>
+            <div><div class="step-card__title">Upload your PDFs</div><p class="step-card__desc">Click "browse" or drag and drop multiple PDF files into the upload area. You can add as many files as you need.</p></div>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">2</div>
+            <div><div class="step-card__title">Reorder if needed</div><p class="step-card__desc">The files will appear in a list. Drag them to set the order they should appear in the final merged document.</p></div>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">3</div>
+            <div><div class="step-card__title">Click Merge &amp; Download</div><p class="step-card__desc">Hit the Merge PDFs button. Processing happens in your browser — download your combined file when it's ready.</p></div>
+          </div>
+        </div>
+
+        <h2>Why use Toolenix to merge PDFs?</h2>
+        <ul>
+          <li>Completely browser-based — your files never leave your device</li>
+          <li>No file size warnings or artificial limits tied to paywalls</li>
+          <li>Merge PDFs of any content type: text, scanned pages, images</li>
+          <li>Reorder pages before merging with a simple drag interface</li>
+          <li>Works on Windows, Mac, Linux, iOS and Android</li>
+          <li>No watermarks added to your output file</li>
+        </ul>
+
+        <h2>Common use cases</h2>
+        <p>Merging PDFs is useful across virtually every industry. Legal teams combine contracts and exhibits into one submission package. Students merge notes, readings, and assignments. Finance teams consolidate monthly reports into quarterly summaries. HR departments bundle policy documents into a single employee handbook. Photographers merge photo books. The list is endless — if you have multiple PDFs that belong together, this tool handles it.</p>
+
+        <h2>Is it safe to merge PDFs online?</h2>
+        <p>With Toolenix, yes. Unlike many online PDF tools, our merger runs entirely inside your browser using the <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> JavaScript library. Your files are loaded into your browser's memory and processed there — no data is transmitted to any server. Once you download your merged file and close the page, nothing persists anywhere.</p>
+
+        <div class="callout">
+          <p><strong>Privacy note:</strong> Toolenix does not store, log, or transmit your PDF files. Processing is 100% client-side. For highly sensitive documents, this architecture is safer than cloud-based alternatives.</p>
+        </div>
+
+      </div>
+
+      <!-- Related tools -->
+      <div style="margin-top:var(--space-12);">
+        <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related PDF tools</h3>
+        <div class="related-tools">
+          <a href="split-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Split PDF</span></a>
+          <a href="compress-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div><span class="related-tool-card__name">Compress PDF</span></a>
+          <a href="rotate-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/></svg></div><span class="related-tool-card__name">Rotate PDF</span></a>
+          <a href="protect-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="related-tool-card__name">Protect PDF</span></a>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="margin-top:var(--space-12);">
+        <h3 style="font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);">Frequently asked questions</h3>
+        <div class="faq-item open">
+          <button class="faq-question" aria-expanded="true">How many PDFs can I merge at once?<span class="faq-question__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer__inner">You can merge as many PDFs as your device memory allows. There's no artificial cap. For very large files or a large number of files, a device with more RAM will handle it more smoothly.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Will the quality of my PDF be reduced?<span class="faq-question__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer__inner">No. Toolenix merges PDFs by combining the raw page data — it does not re-render or re-compress anything. Images, fonts, and formatting are preserved exactly as they were in the originals.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I merge password-protected PDFs?<span class="faq-question__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer__inner">Password-protected PDFs need to be unlocked before merging. Use our <a href="unlock-pdf.html" style="color:var(--clr-primary)">Unlock PDF</a> tool first, then merge the resulting files.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I reorder pages from different PDFs?<span class="faq-question__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer__inner">You can drag the files in the file list to control the order they appear in the merged document. For page-level reordering within a single PDF, use our <a href="split-pdf.html" style="color:var(--clr-primary)">Split PDF</a> tool to extract pages first.</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<!-- pdf-lib CDN -->
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const uploadArea  = document.getElementById('upload-area');
+  const fileInput   = document.getElementById('file-input');
+  const fileListEl  = document.getElementById('file-list');
+  const controls    = document.getElementById('controls');
+  const mergeBtn    = document.getElementById('merge-btn');
+  const clearBtn    = document.getElementById('clear-btn');
+  const addMoreBtn  = document.getElementById('add-more-btn');
+  const progressSec = document.getElementById('progress-section');
+  const uploadSec   = document.getElementById('upload-section');
+  const resultSec   = document.getElementById('result-section');
+  const downloadBtn = document.getElementById('download-btn');
+  const resetBtn    = document.getElementById('reset-btn');
+  const progressFill= document.getElementById('progress-fill');
+  const progressPct = document.getElementById('progress-pct');
+  const resultDesc  = document.getElementById('result-desc');
+
+  let files = [];
+
+  function setProgress(pct, label) {
+    progressFill.style.width = pct + '%';
+    progressPct.textContent  = pct + '%';
+    if (label) document.getElementById('progress-label').textContent = label;
+  }
+
+  function formatBytes(b) {
+    if (!b) return '0 B';
+    const k = 1024, s = ['B','KB','MB','GB'], i = Math.floor(Math.log(b)/Math.log(k));
+    return (b/Math.pow(k,i)).toFixed(1)+' '+s[i];
+  }
+
+  function renderList() {
+    fileListEl.innerHTML = files.map((f, i) => `
+      <div class="file-item" draggable="true" data-idx="${i}">
+        <div class="file-item__icon icon-pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="file-item__info">
+          <div class="file-item__name">${f.name}</div>
+          <div class="file-item__meta">${formatBytes(f.size)}</div>
+        </div>
+        <span class="file-item__status file-item__status--pending">Pending</span>
+        <button class="file-item__remove" data-remove="${i}" aria-label="Remove ${f.name}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    `).join('');
+
+    // Remove buttons
+    fileListEl.querySelectorAll('[data-remove]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        files.splice(+btn.dataset.remove, 1);
+        renderList();
+        controls.style.display = files.length ? 'flex' : 'none';
+      });
+    });
+
+    // Drag-to-reorder
+    let dragIdx = null;
+    fileListEl.querySelectorAll('.file-item').forEach(item => {
+      item.addEventListener('dragstart', () => { dragIdx = +item.dataset.idx; item.style.opacity='0.5'; });
+      item.addEventListener('dragend',   () => { item.style.opacity='1'; });
+      item.addEventListener('dragover',  e => e.preventDefault());
+      item.addEventListener('drop', () => {
+        const toIdx = +item.dataset.idx;
+        if (dragIdx === null || dragIdx === toIdx) return;
+        const moved = files.splice(dragIdx, 1)[0];
+        files.splice(toIdx, 0, moved);
+        renderList();
+      });
+    });
+  }
+
+  function addFiles(newFiles) {
+    const pdfs = Array.from(newFiles).filter(f => f.type === 'application/pdf' || f.name.endsWith('.pdf'));
+    if (!pdfs.length) { window.Toolenix?.Toast.show('Please select PDF files only.', 'warning'); return; }
+    files = [...files, ...pdfs];
+    renderList();
+    controls.style.display = 'flex';
+  }
+
+  window.Toolenix?.initUploadArea(uploadArea, fileInput, {
+    accept: '.pdf', multiple: true,
+    onFiles: addFiles
+  });
+
+  addMoreBtn?.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', () => { addFiles(fileInput.files); fileInput.value=''; });
+  clearBtn?.addEventListener('click', () => { files=[]; renderList(); controls.style.display='none'; });
+
+  mergeBtn?.addEventListener('click', async () => {
+    if (files.length < 2) { window.Toolenix?.Toast.show('Add at least 2 PDF files to merge.', 'warning'); return; }
+
+    uploadSec.style.display  = 'none';
+    progressSec.style.display = 'block';
+    setProgress(0, 'Initialising…');
+
+    try {
+      const { PDFDocument } = PDFLib;
+      const merged = await PDFDocument.create();
+      const step   = 80 / files.length;
+
+      for (let i = 0; i < files.length; i++) {
+        setProgress(Math.round(step * i), `Processing ${i+1} of ${files.length}…`);
+        const buf  = await files[i].arrayBuffer();
+        const doc  = await PDFDocument.load(buf);
+        const pages = await merged.copyPages(doc, doc.getPageIndices());
+        pages.forEach(p => merged.addPage(p));
+      }
+
+      setProgress(90, 'Saving…');
+      const bytes = await merged.save();
+      const blob  = new Blob([bytes], {type:'application/pdf'});
+      const url   = URL.createObjectURL(blob);
+
+      downloadBtn.href = url;
+      downloadBtn.download = 'merged.pdf';
+      resultDesc.textContent = `${files.length} files merged · ${(bytes.length/1024/1024).toFixed(2)} MB`;
+
+      setProgress(100, 'Done!');
+      progressSec.style.display = 'none';
+      resultSec.style.display   = 'block';
+      window.Toolenix?.Toast.show('PDFs merged successfully!', 'success');
+
+    } catch(err) {
+      progressSec.style.display = 'none';
+      uploadSec.style.display   = 'block';
+      window.Toolenix?.Toast.show('Failed to merge: ' + err.message, 'error');
+    }
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    files = [];
+    renderList();
+    controls.style.display    = 'none';
+    resultSec.style.display   = 'none';
+    uploadSec.style.display   = 'block';
+  });
+})();
+</script>
+</body>
+</html>

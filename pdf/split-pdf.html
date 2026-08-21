@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Split PDF Online Free — Extract Pages from PDF | Toolenix</title>
+<meta name="description" content="Split a PDF into individual pages or custom page ranges. Free, browser-based, no signup required. Download each page as a separate PDF instantly.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/split-pdf.html">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Split PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/responsive.css"><link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper"><main id="main-content">
+
+<div class="tool-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+    <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <div class="breadcrumb__item current">Split PDF</div>
+  </nav>
+  <div class="tool-hero__inner">
+    <div class="tool-hero__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+    <div class="tool-hero__content">
+      <div class="tool-hero__label">PDF Tools</div>
+      <h1 class="tool-hero__title">Split PDF</h1>
+      <p class="tool-hero__desc">Split a PDF into individual pages or define custom page ranges. Download each section as a separate PDF file, all processed inside your browser.</p>
+      <div class="tool-hero__tags"><span class="badge badge--success">Free</span><span class="badge badge--primary">Browser-based</span><span class="badge badge--primary">No signup</span></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="tool-interface"><div class="container"><div class="tool-interface__panel">
+
+  <div id="upload-section">
+    <div class="upload-area" id="upload-area" role="button" tabindex="0">
+      <input type="file" id="file-input" class="upload-area__input" accept=".pdf">
+      <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <div class="upload-area__title">Drop your PDF here</div>
+      <p class="upload-area__hint">or click to browse</p>
+      <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+    </div>
+
+    <div id="options-section" style="display:none;margin-top:var(--space-6);">
+      <div class="file-item" id="file-info-row">
+        <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+      </div>
+
+      <div class="tool-settings" style="margin-top:var(--space-5);">
+        <div class="tool-settings__field">
+          <label class="tool-settings__label">Split method</label>
+          <select id="split-mode" class="tool-settings__select">
+            <option value="all">Extract every page separately</option>
+            <option value="range">Custom page range (e.g. 1-3, 5, 7-9)</option>
+          </select>
+        </div>
+        <div class="tool-settings__field" id="range-field" style="display:none;">
+          <label class="tool-settings__label" for="range-input">Page ranges</label>
+          <input type="text" id="range-input" class="tool-settings__input" placeholder="e.g. 1-3, 5, 7-9">
+        </div>
+      </div>
+
+      <div class="tool-controls tool-controls--end">
+        <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+        <button class="btn btn--primary" id="split-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="5 12 12 19 19 12"/></svg>
+          Split PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+    <div class="tool-loading"><div class="spinner"></div>
+      <div class="progress-wrap" style="max-width:400px;width:100%;">
+        <div class="progress-header"><span class="progress-label" id="progress-label">Splitting…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+        <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="result-section" style="display:none;">
+    <div class="result-area">
+      <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="result-area__title">Split complete!</div>
+      <p class="result-area__desc" id="result-desc"></p>
+      <div id="download-list" style="width:100%;display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4);max-height:320px;overflow-y:auto;"></div>
+      <div class="result-area__actions" style="margin-top:var(--space-5);">
+        <button class="btn btn--secondary" id="reset-btn">Split Another</button>
+      </div>
+    </div>
+  </div>
+
+</div></div></div>
+
+<section class="section section--sm"><div class="container"><div class="tool-content">
+  <h2>How to split a PDF into separate files</h2>
+  <p>Splitting a PDF is necessary when you need to share only part of a document, reduce file size by isolating a section, or extract specific pages for editing. Toolenix's split tool gives you two approaches: extract every page individually, or specify custom ranges like "1-5, 8, 10-12" to create exactly the sections you need.</p>
+  <h2>Split modes explained</h2>
+  <ul>
+    <li><strong>Every page separately</strong> — produces one PDF file per page. Useful for isolating individual pages.</li>
+    <li><strong>Custom ranges</strong> — lets you define ranges like "1-3, 5, 7-9". Each range becomes a separate PDF download.</li>
+  </ul>
+  <h2>Common use cases</h2>
+  <p>Legal professionals extract exhibits from case files. Students pull chapters from textbook PDFs. Businesses separate invoices from combined statement PDFs. Designers isolate specific pages from multi-page presentations. Whether you need one page or a range, the split tool handles it cleanly.</p>
+</div>
+<div style="margin-top:var(--space-10);">
+  <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+  <div class="related-tools">
+    <a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a>
+    <a href="extract-pdf-pages.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Extract Pages</span></a>
+    <a href="delete-pdf-pages.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Delete Pages</span></a>
+    <a href="compress-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Compress PDF</span></a>
+  </div>
+</div></div></section>
+
+</main></div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script><script src="../assets/js/navigation.js"></script><script src="../assets/js/footer.js"></script><script src="../assets/js/search.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),fname=document.getElementById('fname'),
+    fmeta=document.getElementById('fmeta'),splitMode=document.getElementById('split-mode'),
+    rangeField=document.getElementById('range-field'),rangeInput=document.getElementById('range-input'),
+    splitBtn=document.getElementById('split-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),downloadList=document.getElementById('download-list'),
+    resultDesc=document.getElementById('result-desc'),resetBtn=document.getElementById('reset-btn'),
+    progressFill=document.getElementById('progress-fill'),progressPct=document.getElementById('progress-pct'),
+    progressLabel=document.getElementById('progress-label');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setProgress(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function parseRanges(str,max){
+    const parts=str.split(',').map(s=>s.trim()).filter(Boolean);
+    const result=[];
+    for(const p of parts){
+      if(p.includes('-')){const[a,b]=p.split('-').map(Number);if(a>=1&&b<=max&&a<=b)result.push({from:a-1,to:b-1});}
+      else{const n=Number(p);if(n>=1&&n<=max)result.push({from:n-1,to:n-1});}
+    }
+    return result;
+  }
+  function handleFile(file){
+    if(!file||!file.name.endsWith('.pdf')){window.Toolenix?.Toast.show('Please select a PDF file.','warning');return;}
+    currentFile=file;
+    fname.textContent=file.name;fmeta.textContent=fmt(file.size);
+    optionsSec.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>handleFile(f[0])});
+  fileInput.addEventListener('change',()=>{handleFile(fileInput.files[0]);fileInput.value='';});
+  splitMode.addEventListener('change',()=>{rangeField.style.display=splitMode.value==='range'?'block':'none';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';});
+  splitBtn.addEventListener('click',async()=>{
+    if(!currentFile){window.Toolenix?.Toast.show('Upload a PDF first.','warning');return;}
+    uploadSec.style.display='none';progressSec.style.display='block';setProgress(5,'Loading PDF…');
+    try{
+      const {PDFDocument}=PDFLib;
+      const buf=await currentFile.arrayBuffer();
+      const src=await PDFDocument.load(buf);
+      const total=src.getPageCount();
+      let ranges=[];
+      if(splitMode.value==='all'){for(let i=0;i<total;i++)ranges.push({from:i,to:i});}
+      else{
+        ranges=parseRanges(rangeInput.value,total);
+        if(!ranges.length){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Invalid page ranges.','error');return;}
+      }
+      downloadList.innerHTML='';
+      for(let r=0;r<ranges.length;r++){
+        setProgress(Math.round(10+80*(r/ranges.length)),`Creating part ${r+1} of ${ranges.length}…`);
+        const {from,to}=ranges[r];
+        const doc=await PDFDocument.create();
+        const indices=[];for(let i=from;i<=to;i++)indices.push(i);
+        const pages=await doc.copyPages(src,indices);
+        pages.forEach(p=>doc.addPage(p));
+        const bytes=await doc.save();
+        const blob=new Blob([bytes],{type:'application/pdf'});
+        const url=URL.createObjectURL(blob);
+        const fname2=ranges.length===1?'split.pdf':`split-part-${r+1}.pdf`;
+        const link=document.createElement('a');
+        link.href=url;link.download=fname2;link.className='btn btn--secondary btn--sm';
+        link.style.cssText='width:100%;justify-content:flex-start;gap:8px;';
+        link.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>${fname2} (${doc.getPageCount()} page${doc.getPageCount()>1?'s':''})`;
+        downloadList.appendChild(link);
+      }
+      setProgress(100,'Done!');
+      resultDesc.textContent=`${ranges.length} file${ranges.length>1?'s':''} created from ${total}-page PDF`;
+      progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('PDF split successfully!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Remover Online Free — Remove Image Background | Toolenix</title>
+<meta name="description" content="Remove image backgrounds automatically using color-flood detection. Free browser-based tool. Download transparent PNG. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/background-remover.html">
+<meta property="og:title" content="Background Remover Online Free — Remove Image Background | Toolenix">
+<meta property="og:description" content="Remove image backgrounds automatically using color-flood detection. Free browser-based tool. Download transparent PNG. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Background Remover","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Background Remover</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Image Tools</div>
+        <h1 class="tool-hero__title">Background Remover</h1>
+        <p class="tool-hero__desc">Remove solid-colour backgrounds from images using flood-fill detection. Works best on uniform backgrounds. Download a transparent PNG instantly.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="callout" style="margin-bottom:var(--space-5);">
+  <p><strong>How this works:</strong> This tool uses colour-range flood-fill to remove uniform backgrounds (white, solid colours). For complex backgrounds with fine detail or hair, professional AI removal (Remove.bg, Adobe Express) produces better results. This tool is best for product photos on solid studio backgrounds.</p>
+</div>
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0" aria-label="Upload image">
+    <input type="file" id="file-input" class="upload-area__input" accept="image/*" aria-label="Select image">
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop an image here</div>
+    <p class="upload-area__hint">Best results on solid-colour backgrounds</p>
+  </div>
+  <div id="options" style="display:none;margin-top:var(--space-5);">
+    <div class="tool-settings">
+      <div class="tool-settings__field">
+        <label class="tool-settings__label">Tolerance: <strong id="tol-val">30</strong></label>
+        <div class="range-wrap">
+          <input type="range" id="tolerance" class="range-slider" min="1" max="120" value="30" aria-label="Removal tolerance">
+          <span class="range-value" id="tol-display">30</span>
+        </div>
+        <p class="input-hint">Higher = removes more colour variation. Lower = more precise edges.</p>
+      </div>
+    </div>
+    <div class="tool-controls tool-controls--end">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="remove-btn">Remove Background</button>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;margin-top:var(--space-5);">
+  <div style="text-align:center;margin-bottom:var(--space-5);">
+    <div style="background:repeating-conic-gradient(#ccc 0% 25%,#fff 0% 50%) 0 0 / 20px 20px;display:inline-block;border-radius:var(--radius-lg);overflow:hidden;max-width:100%;">
+      <img id="result-img" style="display:block;max-width:480px;max-height:360px;" alt="Image with background removed">
+    </div>
+  </div>
+  <div class="result-area__actions" style="justify-content:center;">
+    <a id="download-btn" class="btn btn--primary btn--lg" download="no-bg.png">Download PNG</a>
+    <button class="btn btn--secondary" id="reset-btn">Process Another</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>When flood-fill background removal works well</h2>
+<ul>
+  <li>Product photos on white or solid studio backgrounds</li>
+  <li>Simple logos on uniform backgrounds</li>
+  <li>Screenshots with solid background colours</li>
+  <li>Images where the subject and background have clearly distinct colours</li>
+</ul>
+<h2>Tolerance guide</h2>
+<p>The tolerance setting controls how much colour variation is included in the background mask. Start at 30. If the background isn't fully removed, increase it. If too much of the subject is removed, decrease it. For gradients or shadows near the background, try 50–70.</p>
+<h2>For complex backgrounds</h2>
+<p>Hair, fur, transparent objects, and backgrounds with similar colours to the subject require AI-based segmentation models. Free options include: Remove.bg (limited free uses), Canva's background remover (requires account), and Adobe Express.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a><a href="image-resizer.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Resizer</span></a><a href="image-converter.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Converter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    options=document.getElementById('options'),tolEl=document.getElementById('tolerance'),
+    tolVal=document.getElementById('tol-val'),tolDisplay=document.getElementById('tol-display'),
+    removeBtn=document.getElementById('remove-btn'),clearBtn=document.getElementById('clear-btn'),
+    resultSec=document.getElementById('result-section'),resultImg=document.getElementById('result-img'),
+    downloadBtn=document.getElementById('download-btn'),resetBtn=document.getElementById('reset-btn');
+  let currentFile=null;
+  tolEl.addEventListener('input',()=>{tolVal.textContent=tolEl.value;tolDisplay.textContent=tolEl.value;});
+  function onFile(file){
+    if(!file||!file.type.startsWith('image/')){window.Toolenix?.Toast.show('Please select an image.','warning');return;}
+    currentFile=file;options.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'image/*',multiple:false,onFiles:f=>onFile(f[0])});
+  fileInput.addEventListener('change',()=>{onFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;options.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;options.style.display='none';resultSec.style.display='none';});
+  removeBtn.addEventListener('click',()=>{
+    if(!currentFile)return;
+    const tol=parseInt(tolEl.value);
+    const url=URL.createObjectURL(currentFile);
+    const img=new Image();
+    img.onload=()=>{
+      const W=img.naturalWidth,H=img.naturalHeight;
+      const canvas=document.createElement('canvas');
+      canvas.width=W;canvas.height=H;
+      const ctx=canvas.getContext('2d');
+      ctx.drawImage(img,0,0);
+      URL.revokeObjectURL(url);
+      const data=ctx.getImageData(0,0,W,H);
+      const d=data.data;
+      // Sample bg colour from all four corners, average them
+      const corners=[[0,0],[W-1,0],[0,H-1],[W-1,H-1]];
+      let br=0,bg=0,bb=0;
+      corners.forEach(([x,y])=>{const i=(y*W+x)*4;br+=d[i];bg+=d[i+1];bb+=d[i+2];});
+      br=Math.round(br/4);bg=Math.round(bg/4);bb=Math.round(bb/4);
+      // Flood fill from corners with tolerance
+      const visited=new Uint8Array(W*H);
+      const stack=corners.map(([x,y])=>y*W+x).filter(idx=>!visited[idx]);
+      while(stack.length){
+        const idx=stack.pop();
+        if(visited[idx])continue;
+        visited[idx]=1;
+        const pi=idx*4;
+        const dr=Math.abs(d[pi]-br),dg=Math.abs(d[pi+1]-bg),db=Math.abs(d[pi+2]-bb);
+        if(dr+dg+db>tol*3)continue;
+        d[pi+3]=0;
+        const x=idx%W,y=Math.floor(idx/W);
+        if(x>0&&!visited[idx-1])stack.push(idx-1);
+        if(x<W-1&&!visited[idx+1])stack.push(idx+1);
+        if(y>0&&!visited[idx-W])stack.push(idx-W);
+        if(y<H-1&&!visited[idx+W])stack.push(idx+W);
+      }
+      ctx.putImageData(data,0,0);
+      const out=canvas.toDataURL('image/png');
+      resultImg.src=out;downloadBtn.href=out;
+      resultSec.style.display='block';
+      window.Toolenix?.Toast.show('Background removed!','success');
+    };
+    img.onerror=()=>window.Toolenix?.Toast.show('Failed to load image.','error');
+    img.src=url;
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Tag Generator Online Free — Generate SEO Meta Tags | Toolenix</title>
+<meta name="description" content="Generate complete SEO meta tags including title, description, canonical, Open Graph, Twitter Card and robots. Free browser-based meta tag generator.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/meta-tag-generator.html">
+<meta property="og:title" content="Meta Tag Generator Online Free — Generate SEO Meta Tags | Toolenix">
+<meta property="og:description" content="Generate complete SEO meta tags including title, description, canonical, Open Graph, Twitter Card and robots. Free browser-based meta tag generator.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Meta Tag Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Meta Tag Generator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">SEO Tools</div>
+        <h1 class="tool-hero__title">Meta Tag Generator</h1>
+        <p class="tool-hero__desc">Generate complete SEO meta tags from a simple form. Covers title, description, canonical, Open Graph, Twitter Card, and robots directives. Copy-paste ready.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-8);align-items:start;">
+  <div>
+    <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-5);">Page details</h3>
+    <div class="input-group">
+      <label class="input-label" for="mt-title">Page title <span style="color:var(--clr-text-3);font-size:0.75rem;">(50–60 chars ideal)</span></label>
+      <input type="text" id="mt-title" class="input-field" placeholder="My Page Title — Brand Name" maxlength="70" aria-describedby="mt-title-count">
+      <div id="mt-title-count" class="input-hint">0 / 60 characters</div>
+    </div>
+    <div class="input-group">
+      <label class="input-label" for="mt-desc">Meta description <span style="color:var(--clr-text-3);font-size:0.75rem;">(150–160 chars ideal)</span></label>
+      <textarea id="mt-desc" class="input-field" style="min-height:80px;" placeholder="A compelling description of this page for search results." maxlength="200" aria-describedby="mt-desc-count"></textarea>
+      <div id="mt-desc-count" class="input-hint">0 / 160 characters</div>
+    </div>
+    <div class="input-group">
+      <label class="input-label" for="mt-url">Canonical URL</label>
+      <input type="url" id="mt-url" class="input-field" placeholder="https://example.com/page">
+    </div>
+    <div class="input-group">
+      <label class="input-label" for="mt-image">OG image URL <span style="color:var(--clr-text-3);font-size:0.75rem;">(1200×630px recommended)</span></label>
+      <input type="url" id="mt-image" class="input-field" placeholder="https://example.com/og-image.jpg">
+    </div>
+    <div class="input-group">
+      <label class="input-label" for="mt-author">Author (optional)</label>
+      <input type="text" id="mt-author" class="input-field" placeholder="Your Name or Brand">
+    </div>
+    <div class="input-group">
+      <label class="input-label" for="mt-robots">Robots directive</label>
+      <select id="mt-robots" class="input-field">
+        <option value="index, follow">index, follow (default)</option>
+        <option value="noindex, follow">noindex, follow</option>
+        <option value="index, nofollow">index, nofollow</option>
+        <option value="noindex, nofollow">noindex, nofollow</option>
+      </select>
+    </div>
+    <div class="tool-controls tool-controls--end">
+      <button class="btn btn--primary" id="gen-btn">Generate Tags</button>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-4);">
+      <h3 style="font-size:var(--text-base);font-weight:700;">Generated Tags</h3>
+      <button class="btn btn--secondary btn--sm" id="copy-btn" aria-label="Copy all generated tags">Copy All</button>
+    </div>
+    <textarea id="mt-output" class="input-field textarea-field" style="min-height:480px;font-family:'Fira Code',monospace;font-size:0.78rem;" readonly placeholder="Fill in the form and click Generate…" aria-label="Generated meta tags" aria-live="polite"></textarea>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Why meta tags matter for SEO</h2>
+<p>The title tag is the most important on-page SEO element. It appears in browser tabs, search result headlines, and social media share previews. The meta description doesn't directly affect rankings but strongly influences click-through rate — it's your page's pitch in the search results.</p>
+<h2>Open Graph and Twitter Card</h2>
+<p>Without these tags, social platforms generate their own link previews — often with wrong images, truncated titles, or the wrong description. Open Graph controls Facebook, LinkedIn, WhatsApp, Telegram, and most other platforms. Twitter Card controls X (Twitter). Both should always be set explicitly.</p>
+<h2>Optimal dimensions and lengths</h2>
+<ul>
+  <li><strong>Title</strong> — 50–60 characters. Google's search result title truncates around 600px display width, which corresponds to roughly 60 characters for average text.</li>
+  <li><strong>Meta description</strong> — 150–160 characters. Longer descriptions are truncated with ellipsis in search results.</li>
+  <li><strong>OG image</strong> — 1200×630px. This is the recommended size for most platforms. Minimum is 600×315px — anything smaller renders as a small inline image rather than a large card.</li>
+</ul>
+<h2>Robots meta tag</h2>
+<p><code>index, follow</code> (the default) tells search engines to index this page and follow links on it. <code>noindex</code> prevents the page from appearing in search results but doesn't block crawling. Use <code>noindex, nofollow</code> for admin pages, thank-you pages, and any page you don't want in search results.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="robots-txt.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Robots.txt Generator</span></a><a href="word-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Word Counter</span></a><a href="character-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Character Counter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const titleEl=document.getElementById('mt-title'),descEl=document.getElementById('mt-desc'),
+    urlEl=document.getElementById('mt-url'),imageEl=document.getElementById('mt-image'),
+    authorEl=document.getElementById('mt-author'),robotsEl=document.getElementById('mt-robots'),
+    genBtn=document.getElementById('gen-btn'),mtOutput=document.getElementById('mt-output'),
+    copyBtn=document.getElementById('copy-btn'),
+    titleCount=document.getElementById('mt-title-count'),descCount=document.getElementById('mt-desc-count');
+
+  function updateCount(el, counterEl, limit){
+    const n=el.value.length;
+    counterEl.textContent=n+' / '+limit+' characters';
+    counterEl.style.color=n>limit?'var(--clr-danger)':n>limit*0.9?'var(--clr-success)':'var(--clr-text-3)';
+  }
+
+  titleEl.addEventListener('input',()=>updateCount(titleEl,titleCount,60));
+  descEl.addEventListener('input',()=>updateCount(descEl,descCount,160));
+
+  genBtn.addEventListener('click',()=>{
+    const t=titleEl.value.trim();
+    const d=descEl.value.trim();
+    const u=urlEl.value.trim();
+    const img=imageEl.value.trim();
+    const auth=authorEl.value.trim();
+    const robots=robotsEl.value;
+
+    if(!t){window.Toolenix?.Toast.show('Page title is required.','warning');return;}
+
+    const lines=[
+      '<!-- Primary Meta Tags -->',
+      '<title>'+t+'</title>',
+      '<meta name="title" content="'+t+'">',
+      d?'<meta name="description" content="'+d+'">':null,
+      u?'<link rel="canonical" href="'+u+'">':null,
+      auth?'<meta name="author" content="'+auth+'">':null,
+      '<meta name="robots" content="'+robots+'">',
+      '',
+      '<!-- Open Graph / Social -->',
+      '<meta property="og:type" content="website">',
+      '<meta property="og:title" content="'+t+'">',
+      d?'<meta property="og:description" content="'+d+'">':null,
+      u?'<meta property="og:url" content="'+u+'">':null,
+      img?'<meta property="og:image" content="'+img+'">':null,
+      img?'<meta property="og:image:width" content="1200">':null,
+      img?'<meta property="og:image:height" content="630">':null,
+      '',
+      '<!-- Twitter Card -->',
+      '<meta name="twitter:card" content="summary_large_image">',
+      '<meta name="twitter:title" content="'+t+'">',
+      d?'<meta name="twitter:description" content="'+d+'">':null,
+      img?'<meta name="twitter:image" content="'+img+'">':null,
+    ].filter(l=>l!==null);
+
+    mtOutput.value=lines.join('\n');
+    window.Toolenix?.Toast.show('Meta tags generated!','success');
+  });
+
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(mtOutput.value,copyBtn));
+
+})();
+</script>
+</body>
+</html>

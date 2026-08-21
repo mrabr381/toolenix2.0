@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder Decoder Online Free | Toolenix | Toolenix</title>
+<meta name="description" content="Encode text to Base64 or decode Base64 strings online. Supports Unicode. Free, browser-based Base64 encoder/decoder. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/base64-tool.html">
+<meta property="og:title" content="Base64 Encoder Decoder Online Free | Toolenix | Toolenix">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 strings online. Supports Unicode. Free, browser-based Base64 encoder/decoder. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Base64 Encoder / Decoder","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Base64 Encoder / Decoder</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">Base64 Encoder / Decoder</h1>
+        <p class="tool-hero__desc">Encode plain text to Base64 or decode Base64 strings back to text. Full Unicode support. All processing is client-side — nothing transmitted.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-5);align-items:start;">
+  <div>
+    <label class="input-label" for="b64-input">Input</label>
+    <textarea id="b64-input" class="input-field textarea-field" style="min-height:220px;font-family:'Fira Code',monospace;font-size:0.82rem;" placeholder="Plain text or Base64 string…" aria-label="Base64 input text"></textarea>
+    <div style="display:flex;gap:var(--space-3);margin-top:var(--space-3);">
+      <button class="btn btn--primary" id="encode-btn">Encode →</button>
+      <button class="btn btn--secondary" id="decode-btn">← Decode</button>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="b64-output">Output</label>
+      <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy output">Copy</button>
+    </div>
+    <textarea id="b64-output" class="input-field textarea-field" style="min-height:220px;font-family:'Fira Code',monospace;font-size:0.82rem;" readonly placeholder="Result appears here…" aria-label="Base64 output" aria-live="polite"></textarea>
+  </div>
+</div>
+<div id="b64-error" role="alert" aria-live="assertive" style="display:none;margin-top:var(--space-3);padding:var(--space-3) var(--space-4);background:rgba(239,68,68,0.08);border-left:3px solid var(--clr-danger);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--clr-danger);"></div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What is Base64?</h2>
+<p>Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It was designed to safely transmit binary data through channels that only support text — such as email protocols, JSON, XML, and HTTP headers.</p>
+<h2>Common uses</h2>
+<ul>
+  <li><strong>Data URLs</strong> — embedding images directly in HTML or CSS: <code>src="data:image/png;base64,…"</code></li>
+  <li><strong>HTTP Basic Auth</strong> — credentials are Base64-encoded in the Authorization header</li>
+  <li><strong>JWT tokens</strong> — the header and payload sections are Base64url-encoded JSON</li>
+  <li><strong>Email attachments</strong> — MIME protocol encodes attachments as Base64</li>
+  <li><strong>API payloads</strong> — encoding binary data for JSON transmission where binary fields aren't supported</li>
+</ul>
+<div class="callout callout--warning">
+  <p><strong>Base64 is encoding, not encryption.</strong> Anyone with the encoded string can decode it instantly. Never use Base64 to obscure sensitive data — use proper encryption for that.</p>
+</div>
+<h2>Unicode support</h2>
+<p>Standard Base64 functions in JavaScript (<code>btoa</code>/<code>atob</code>) only handle Latin-1 characters. Toolenix uses <code>encodeURIComponent</code> + <code>unescape</code> to correctly handle Unicode text including emoji, Chinese characters, and other multi-byte characters.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="url-encoder.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">URL Encoder</span></a><a href="hash-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Hash Generator</span></a><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const b64Input=document.getElementById('b64-input'),
+    b64Output=document.getElementById('b64-output'),
+    encodeBtn=document.getElementById('encode-btn'),
+    decodeBtn=document.getElementById('decode-btn'),
+    copyBtn=document.getElementById('copy-btn'),
+    b64Error=document.getElementById('b64-error');
+
+  function clearError(){b64Error.style.display='none';b64Error.textContent='';}
+  function showError(msg){b64Error.textContent=msg;b64Error.style.display='block';}
+
+  encodeBtn.addEventListener('click',()=>{
+    clearError();
+    try{
+      // Unicode-safe encode
+      b64Output.value=btoa(unescape(encodeURIComponent(b64Input.value)));
+    }catch(e){showError('Encode error: '+e.message);}
+  });
+
+  decodeBtn.addEventListener('click',()=>{
+    clearError();
+    try{
+      b64Output.value=decodeURIComponent(escape(atob(b64Input.value.trim())));
+    }catch(e){showError('Invalid Base64 input: '+e.message);}
+  });
+
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(b64Output.value,copyBtn));
+
+})();
+</script>
+</body>
+</html>

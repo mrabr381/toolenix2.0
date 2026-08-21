@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator Online Free — Create QR Codes Instantly | Toolenix</title>
+<meta name="description" content="Generate QR codes for URLs, text, WiFi, email and phone. Free browser-based QR code generator. Download PNG. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/qr-code-generator.html">
+<meta property="og:title" content="QR Code Generator Online Free — Create QR Codes Instantly | Toolenix">
+<meta property="og:description" content="Generate QR codes for URLs, text, WiFi, email and phone. Free browser-based QR code generator. Download PNG. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QR Code Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">QR Code Generator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-util"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><line x1="14" y1="14" x2="21" y2="14"/><line x1="21" y1="14" x2="21" y2="21"/><line x1="14" y1="21" x2="21" y2="21"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Utilities</div>
+        <h1 class="tool-hero__title">QR Code Generator</h1>
+        <p class="tool-hero__desc">Generate QR codes for URLs, plain text, email, phone numbers and WiFi credentials. Download as PNG — all generated in your browser.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="tool-settings">
+  <div class="tool-settings__field">
+    <label class="tool-settings__label" for="qr-type">Content type</label>
+    <select id="qr-type" class="tool-settings__select">
+      <option value="text">URL / Plain Text</option>
+      <option value="email">Email</option>
+      <option value="phone">Phone Number</option>
+      <option value="wifi">WiFi Network</option>
+    </select>
+  </div>
+  <div class="tool-settings__field">
+    <label class="tool-settings__label" for="qr-size">Output size</label>
+    <select id="qr-size" class="tool-settings__select">
+      <option value="200">200×200px</option>
+      <option value="300" selected>300×300px</option>
+      <option value="400">400×400px</option>
+      <option value="600">600×600px</option>
+    </select>
+  </div>
+</div>
+<div id="text-fields">
+  <div class="input-group">
+    <label class="input-label" for="qr-text">URL or text</label>
+    <input type="text" id="qr-text" class="input-field" placeholder="https://example.com">
+  </div>
+</div>
+<div id="email-fields" style="display:none;">
+  <div class="input-group"><label class="input-label" for="qr-email">Email address</label><input type="email" id="qr-email" class="input-field" placeholder="you@example.com"></div>
+  <div class="input-group"><label class="input-label" for="qr-subject">Subject (optional)</label><input type="text" id="qr-subject" class="input-field" placeholder="Hello"></div>
+</div>
+<div id="phone-fields" style="display:none;">
+  <div class="input-group"><label class="input-label" for="qr-phone">Phone number</label><input type="tel" id="qr-phone" class="input-field" placeholder="+1234567890"></div>
+</div>
+<div id="wifi-fields" style="display:none;">
+  <div class="input-group"><label class="input-label" for="qr-ssid">Network name (SSID)</label><input type="text" id="qr-ssid" class="input-field" placeholder="MyNetwork"></div>
+  <div class="input-group"><label class="input-label" for="qr-pass">Password</label><input type="password" id="qr-pass" class="input-field" placeholder="Password"></div>
+  <div class="input-group"><label class="input-label" for="qr-enc">Encryption</label><select id="qr-enc" class="input-field"><option>WPA</option><option>WEP</option><option value="nopass">None</option></select></div>
+</div>
+<div class="tool-controls tool-controls--end">
+  <button class="btn btn--primary" id="gen-btn">Generate QR Code</button>
+</div>
+<div id="qr-result" style="display:none;text-align:center;margin-top:var(--space-8);">
+  <div id="qr-container" style="display:inline-block;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);"></div>
+  <div class="result-area__actions" style="justify-content:center;margin-top:var(--space-6);">
+    <a id="qr-download" class="btn btn--primary btn--lg" download="qrcode.png">Download PNG</a>
+    <button class="btn btn--secondary" id="qr-copy">Copy to Clipboard</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What can a QR code contain?</h2>
+<ul>
+  <li><strong>URL</strong> — links directly to any website. The most common use case. Keep URLs short to reduce QR complexity.</li>
+  <li><strong>Email</strong> — opens the user's mail client pre-filled with address and subject when scanned.</li>
+  <li><strong>Phone</strong> — opens the device dialler with a number pre-entered.</li>
+  <li><strong>WiFi</strong> — lets guests connect to your network by scanning, without typing a password. Supported on iOS 11+ and Android 10+.</li>
+  <li><strong>Plain text</strong> — any text string displayed on screen after scanning.</li>
+</ul>
+<h2>QR code best practices</h2>
+<ul>
+  <li>Print at minimum 2×2cm for reliable scanning from arm's length</li>
+  <li>High contrast matters — dark QR on white background, not on gradients</li>
+  <li>Test your QR code with at least two devices before printing at scale</li>
+  <li>For URLs, use a URL shortener to reduce character count and QR complexity, which improves scan speed</li>
+  <li>Add a call-to-action near the QR code — most people won't scan if they don't know what they're scanning</li>
+</ul></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="password-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-util"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Password Generator</span></a><a href="url-encoder.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">URL Encoder</span></a><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+
+  const typeEl=document.getElementById('qr-type'),genBtn=document.getElementById('gen-btn'),
+    qrResult=document.getElementById('qr-result'),qrContainer=document.getElementById('qr-container'),
+    qrDownload=document.getElementById('qr-download'),qrCopy=document.getElementById('qr-copy'),
+    sizeEl=document.getElementById('qr-size');
+  const sections={text:'text-fields',email:'email-fields',phone:'phone-fields',wifi:'wifi-fields'};
+  typeEl.addEventListener('change',()=>{
+    Object.values(sections).forEach(id=>{document.getElementById(id).style.display='none';});
+    document.getElementById(sections[typeEl.value]).style.display='block';
+  });
+  function buildContent(){
+    const t=typeEl.value;
+    if(t==='text')return document.getElementById('qr-text').value.trim();
+    if(t==='email'){
+      const e=document.getElementById('qr-email').value.trim();
+      const s=document.getElementById('qr-subject').value.trim();
+      return 'mailto:'+e+(s?'?subject='+encodeURIComponent(s):'');
+    }
+    if(t==='phone')return 'tel:'+document.getElementById('qr-phone').value.trim();
+    if(t==='wifi'){
+      const s=document.getElementById('qr-ssid').value.trim();
+      const p=document.getElementById('qr-pass').value;
+      const e=document.getElementById('qr-enc').value;
+      return 'WIFI:T:'+e+';S:'+s+';P:'+p+';;';
+    }
+    return '';
+  }
+  genBtn.addEventListener('click',()=>{
+    const content=buildContent();
+    if(!content){window.Toolenix?.Toast.show('Please enter content for the QR code.','warning');return;}
+    const size=parseInt(sizeEl.value);
+    qrContainer.innerHTML='';
+    try{
+      new QRCode(qrContainer,{
+        text:content,width:size,height:size,
+        colorDark:'#111827',colorLight:'#ffffff',
+        correctLevel:QRCode.CorrectLevel.M
+      });
+    }catch(e){window.Toolenix?.Toast.show('QR generation failed: '+e.message,'error');return;}
+    setTimeout(()=>{
+      const canvas=qrContainer.querySelector('canvas');
+      const img=qrContainer.querySelector('img');
+      const src=canvas?canvas.toDataURL('image/png'):img?img.src:'';
+      if(src){qrDownload.href=src;qrResult.style.display='block';}
+    },150);
+  });
+  qrCopy.addEventListener('click',()=>{
+    const canvas=qrContainer.querySelector('canvas');
+    if(!canvas){window.Toolenix?.Toast.show('Generate a QR code first.','warning');return;}
+    canvas.toBlob(async blob=>{
+      try{
+        await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+        window.Toolenix?.Toast.show('QR code copied to clipboard!','success');
+      }catch{
+        window.Toolenix?.Toast.show('Clipboard copy not supported in this browser. Use Download instead.','warning');
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

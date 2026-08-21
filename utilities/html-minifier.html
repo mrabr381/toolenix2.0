@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Minifier Online Free — Minify HTML Code | Toolenix</title>
+<meta name="description" content="Minify HTML code to reduce file size. Remove whitespace, comments and optional attributes. Free browser-based HTML minifier. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/html-minifier.html">
+<meta property="og:title" content="HTML Minifier Online Free — Minify HTML Code | Toolenix">
+<meta property="og:description" content="Minify HTML code to reduce file size. Remove whitespace, comments and optional attributes. Free browser-based HTML minifier. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"HTML Minifier","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">HTML Minifier</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">HTML Minifier</h1>
+        <p class="tool-hero__desc">Minify HTML code by removing whitespace, comments and redundant attributes. Reduces file size for faster page loads — processes instantly in your browser.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-5);align-items:start;">
+  <div>
+    <label class="input-label" for="html-input">Input HTML</label>
+    <textarea id="html-input" class="input-field textarea-field" style="min-height:340px;font-family:'Fira Code',monospace;font-size:0.8rem;" placeholder="Paste your HTML here…" aria-label="HTML to minify"></textarea>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="html-output">Minified Output</label>
+      <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy minified HTML">Copy</button>
+    </div>
+    <textarea id="html-output" class="input-field textarea-field" style="min-height:340px;font-family:'Fira Code',monospace;font-size:0.8rem;" readonly placeholder="Minified HTML appears here…" aria-label="Minified HTML output" aria-live="polite"></textarea>
+  </div>
+</div>
+<div class="tool-controls tool-controls--between" style="margin-top:var(--space-4);">
+  <div style="display:flex;gap:var(--space-5);flex-wrap:wrap;">
+    <label class="checkbox-item">
+      <input type="checkbox" id="rm-comments" checked aria-label="Remove HTML comments">
+      <span class="checkbox-item__label">Remove comments</span>
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" id="rm-whitespace" checked aria-label="Collapse whitespace">
+      <span class="checkbox-item__label">Collapse whitespace</span>
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" id="rm-attr-quotes" aria-label="Remove optional attribute quotes">
+      <span class="checkbox-item__label">Remove optional quotes</span>
+    </label>
+  </div>
+  <button class="btn btn--primary" id="minify-btn">Minify HTML</button>
+</div>
+<div id="savings" aria-live="polite" style="display:none;margin-top:var(--space-3);font-size:var(--text-sm);color:var(--clr-success);font-weight:600;"></div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What HTML minification removes</h2>
+<ul>
+  <li><strong>HTML comments</strong> — <code>&lt;!-- … --&gt;</code> blocks add no value to the browser and can be removed safely in production.</li>
+  <li><strong>Whitespace between tags</strong> — multiple spaces, newlines, and indentation between elements are collapsed to single spaces. This is safe for block elements but can affect inline elements in edge cases.</li>
+  <li><strong>Optional attribute quotes</strong> — attribute values without spaces, quotes, or special characters don't require quotes in HTML5. <code>class="nav"</code> can become <code>class=nav</code>. This is aggressive and should be tested.</li>
+</ul>
+<h2>Typical savings</h2>
+<p>Whitespace removal typically yields 5–20% size reduction depending on how the original was formatted. Combined with server-side gzip/Brotli compression (which all modern web servers provide), minification provides a smaller but still meaningful additional reduction — typically 3–8% on top of compression.</p>
+<div class="callout">
+  <p>Always minify in your build process (Webpack, Vite, Parcel, Gulp) rather than manually. Automated minification is error-free, runs on every build, and can apply more aggressive optimisations safely.</p>
+</div></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="css-minifier.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">CSS Minifier</span></a><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const htmlInput=document.getElementById('html-input'),
+    htmlOutput=document.getElementById('html-output'),
+    minifyBtn=document.getElementById('minify-btn'),
+    copyBtn=document.getElementById('copy-btn'),
+    savingsEl=document.getElementById('savings');
+
+  function minify(){
+    let html=htmlInput.value;
+    if(!html.trim()) return;
+
+    if(document.getElementById('rm-comments').checked){
+      html=html.replace(/<!--[\s\S]*?-->/g,'');
+    }
+    if(document.getElementById('rm-whitespace').checked){
+      html=html.replace(/\s+/g,' ');
+      html=html.replace(/> </g,'><');
+      html=html.trim();
+    }
+    if(document.getElementById('rm-attr-quotes').checked){
+      html=html.replace(/=\"([^"<>\s]*?)\"/g,(m,v)=>/[<>"'`=\s]/.test(v)?m:'='+v);
+    }
+
+    htmlOutput.value=html;
+    const orig=htmlInput.value.length, min=html.length;
+    const saved=orig>0?Math.round((1-min/orig)*100):0;
+    savingsEl.textContent=`Reduced by ${saved}% — ${orig.toLocaleString()} → ${min.toLocaleString()} characters`;
+    savingsEl.style.display='block';
+  }
+
+  minifyBtn.addEventListener('click',minify);
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(htmlOutput.value,copyBtn));
+
+  let debounce;
+  htmlInput.addEventListener('input',()=>{
+    clearTimeout(debounce);
+    debounce=setTimeout(()=>{if(htmlInput.value.trim()){minify();}else{htmlOutput.value='';savingsEl.style.display='none';}},300);
+  });
+
+})();
+</script>
+</body>
+</html>

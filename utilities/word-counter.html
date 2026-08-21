@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter Online Free — Count Words Characters Sentences | Toolenix</title>
+<meta name="description" content="Count words, characters, sentences, paragraphs and reading time in real time. Free browser-based word counter. No signup needed.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/word-counter.html">
+<meta property="og:title" content="Word Counter Online Free — Count Words Characters Sentences | Toolenix">
+<meta property="og:description" content="Count words, characters, sentences, paragraphs and reading time in real time. Free browser-based word counter. No signup needed.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Word Counter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Word Counter</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Text Tools</div>
+        <h1 class="tool-hero__title">Word Counter</h1>
+        <p class="tool-hero__desc">Count words, characters, sentences, paragraphs and estimated reading time. Updates instantly as you type — no submit button needed.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--4" style="margin-bottom:var(--space-5);" aria-live="polite">
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="wc-words" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-primary);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Words</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="wc-chars" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-secondary);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Characters</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="wc-sentences" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-accent);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Sentences</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="wc-read" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-success);line-height:1;">0s</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Read time</div>
+  </div>
+</div>
+<div class="input-group">
+  <label class="input-label" for="wc-input">Type or paste your text</label>
+  <textarea id="wc-input" class="input-field textarea-field" style="min-height:280px;" placeholder="Start typing or paste your text here…" aria-label="Text to analyse"></textarea>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:var(--space-3);flex-wrap:wrap;gap:var(--space-3);">
+  <div style="font-size:var(--text-xs);color:var(--clr-text-3);" id="wc-extra">0 characters without spaces · 0 paragraphs</div>
+  <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Character limit reference</h2>
+<ul>
+  <li><strong>X (Twitter)</strong> — 280 characters per post</li>
+  <li><strong>Instagram caption</strong> — 2,200 characters (first 125 shown before "more")</li>
+  <li><strong>Meta description</strong> — 150–160 characters recommended for SEO</li>
+  <li><strong>Meta title</strong> — 50–60 characters recommended</li>
+  <li><strong>LinkedIn post</strong> — 3,000 characters (first 210 shown before "see more")</li>
+  <li><strong>Google Business description</strong> — 750 characters</li>
+</ul>
+<h2>Reading time calculation</h2>
+<p>Reading time is calculated based on the average adult reading speed of 200 words per minute. This is deliberately conservative — technical content or dense prose is read more slowly. Marketing research suggests web readers scan rather than read, so shorter is often more effective regardless of the technical word count.</p>
+<h2>Word count targets for SEO</h2>
+<p>Word count correlates weakly with rankings — Google has explicitly said it's not a direct ranking factor. What matters is whether the content covers the topic thoroughly enough to satisfy the search intent. For most informational topics, 1,000–2,000 words is sufficient. Longer is only better if the additional content adds value.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="character-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Character Counter</span></a><a href="case-converter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Case Converter</span></a><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const wcInput=document.getElementById('wc-input'),clearBtn=document.getElementById('clear-btn'),
+    wcWords=document.getElementById('wc-words'),wcChars=document.getElementById('wc-chars'),
+    wcSentences=document.getElementById('wc-sentences'),wcRead=document.getElementById('wc-read'),wcExtra=document.getElementById('wc-extra');
+  function update(){
+    const text=wcInput.value;
+    const words=text.trim()?text.trim().split(/\s+/).filter(Boolean).length:0;
+    const chars=text.length;
+    const charsNoSpace=text.replace(/\s/g,'').length;
+    const sentences=text.split(/[.!?]+/).filter(s=>s.trim()).length;
+    const paras=text.split(/\n+/).filter(p=>p.trim()).length;
+    const readSec=Math.ceil(words/200*60);
+    const readStr=readSec===0?'0s':readSec<60?readSec+'s':Math.ceil(readSec/60)+'m';
+    wcWords.textContent=words.toLocaleString();
+    wcChars.textContent=chars.toLocaleString();
+    wcSentences.textContent=sentences.toLocaleString();
+    wcRead.textContent=readStr;
+    wcExtra.textContent=charsNoSpace.toLocaleString()+' characters without spaces · '+paras+' paragraph'+(paras!==1?'s':'');
+  }
+  wcInput.addEventListener('input',update);
+  clearBtn.addEventListener('click',()=>{wcInput.value='';update();});
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compress PDF Online Free — Reduce PDF File Size | Toolenix</title>
+<meta name="description" content="Compress PDF files and reduce file size without losing quality. Free, browser-based PDF compression. No upload required, no signup.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/compress-pdf.html">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Compress PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/responsive.css"><link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper"><main id="main-content">
+
+<div class="tool-hero"><div class="container">
+  <nav class="breadcrumb"><div class="breadcrumb__item"><a href="../index.html">Home</a></div><svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><div class="breadcrumb__item current">Compress PDF</div></nav>
+  <div class="tool-hero__inner">
+    <div class="tool-hero__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+    <div class="tool-hero__content">
+      <div class="tool-hero__label">PDF Tools</div>
+      <h1 class="tool-hero__title">Compress PDF</h1>
+      <p class="tool-hero__desc">Reduce the file size of your PDF. Client-side compression removes redundant metadata and optimises internal structure — your file never leaves your device.</p>
+      <div class="tool-hero__tags"><span class="badge badge--success">Free</span><span class="badge badge--primary">Browser-based</span><span class="badge badge--primary">No signup</span></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="tool-interface"><div class="container"><div class="tool-interface__panel">
+  <div id="upload-section">
+    <div class="upload-area" id="upload-area" role="button" tabindex="0">
+      <input type="file" id="file-input" class="upload-area__input" accept=".pdf">
+      <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <div class="upload-area__title">Drop your PDF here</div>
+      <p class="upload-area__hint">or click to browse</p>
+      <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+    </div>
+    <div id="options-section" style="display:none;margin-top:var(--space-5);">
+      <div class="file-item">
+        <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+      </div>
+      <div class="callout" style="margin-top:var(--space-5);">
+        <p><strong>How it works:</strong> Toolenix removes metadata, unused objects, and compresses streams client-side using pdf-lib. Compression results vary by PDF type. Text-heavy PDFs compress well; already-optimised or image-heavy PDFs may see smaller gains.</p>
+      </div>
+      <div class="tool-controls tool-controls--end" style="margin-top:var(--space-5);">
+        <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+        <button class="btn btn--primary" id="compress-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+          Compress PDF
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+    <div class="tool-loading"><div class="spinner"></div>
+      <div class="progress-wrap" style="max-width:400px;width:100%;">
+        <div class="progress-header"><span class="progress-label" id="progress-label">Compressing…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+        <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+  <div id="result-section" style="display:none;">
+    <div class="result-area">
+      <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="result-area__title">Compression complete!</div>
+      <p class="result-area__desc" id="result-desc"></p>
+      <div id="savings-display" style="margin:var(--space-5) auto;padding:var(--space-5);background:rgba(16,185,129,0.08);border-radius:var(--radius-lg);border:1px solid rgba(16,185,129,0.2);max-width:340px;text-align:center;">
+        <div style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-success);" id="savings-pct">0%</div>
+        <div style="font-size:var(--text-sm);color:var(--clr-text-3);margin-top:4px;">size reduction</div>
+        <div style="display:flex;justify-content:center;gap:var(--space-6);margin-top:var(--space-4);font-size:var(--text-sm);">
+          <div><div style="color:var(--clr-text-3)">Before</div><div style="font-weight:700;" id="size-before"></div></div>
+          <div style="color:var(--clr-text-3);font-size:1.2rem;">→</div>
+          <div><div style="color:var(--clr-text-3)">After</div><div style="font-weight:700;color:var(--clr-success);" id="size-after"></div></div>
+        </div>
+      </div>
+      <div class="result-area__actions">
+        <a id="download-btn" class="btn btn--primary btn--lg" download="compressed.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Compressed PDF
+        </a>
+        <button class="btn btn--secondary" id="reset-btn">Compress Another</button>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+
+<section class="section section--sm"><div class="container"><div class="tool-content">
+  <h2>Why compress a PDF?</h2>
+  <p>Large PDFs cause problems: email attachments get rejected, cloud storage fills up, and page load times suffer. Compressing a PDF removes unnecessary data — embedded metadata, duplicate objects, and unoptimised object streams — making the file smaller without touching the visible content.</p>
+  <h2>Honest expectation: what client-side compression can and cannot do</h2>
+  <p>Toolenix's compressor uses pdf-lib to strip metadata, remove unused objects, and pack object streams more efficiently. This works well on PDFs that are unoptimised at creation (many Word-to-PDF exports, for example). However, a PDF that already contains compressed JPEGs and was previously optimised may see only modest size reduction. For aggressive image downsampling, a server-side compressor is more effective — but that means uploading your file to someone else's server.</p>
+  <div class="callout">
+    <p>If size reduction is less than expected, the PDF was likely already well-optimised. Your file content is always preserved exactly as it was.</p>
+  </div>
+</div>
+<div style="margin-top:var(--space-10);">
+  <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+  <div class="related-tools">
+    <a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a>
+    <a href="split-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Split PDF</span></a>
+    <a href="protect-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">Protect PDF</span></a>
+    <a href="../utilities/image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a>
+  </div>
+</div></div></section>
+
+</main></div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script><script src="../assets/js/navigation.js"></script><script src="../assets/js/footer.js"></script><script src="../assets/js/search.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    compressBtn=document.getElementById('compress-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),downloadBtn=document.getElementById('download-btn'),
+    resetBtn=document.getElementById('reset-btn'),progressFill=document.getElementById('progress-fill'),
+    progressPct=document.getElementById('progress-pct'),progressLabel=document.getElementById('progress-label'),
+    savingsPct=document.getElementById('savings-pct'),sizeBefore=document.getElementById('size-before'),sizeAfter=document.getElementById('size-after'),
+    resultDesc=document.getElementById('result-desc');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setProgress(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function handleFile(file){
+    if(!file||!file.name.endsWith('.pdf')){window.Toolenix?.Toast.show('Please select a PDF.','warning');return;}
+    currentFile=file;fname.textContent=file.name;fmeta.textContent=fmt(file.size);optionsSec.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>handleFile(f[0])});
+  fileInput.addEventListener('change',()=>{handleFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';});
+  compressBtn.addEventListener('click',async()=>{
+    if(!currentFile)return;
+    uploadSec.style.display='none';progressSec.style.display='block';
+    setProgress(10,'Loading PDF…');
+    try{
+      const {PDFDocument}=PDFLib;
+      const origSize=currentFile.size;
+      const buf=await currentFile.arrayBuffer();
+      setProgress(40,'Optimising…');
+      const doc=await PDFDocument.load(buf,{updateMetadata:false});
+      // Remove metadata to reduce size
+      doc.setTitle('');doc.setAuthor('');doc.setSubject('');doc.setKeywords([]);doc.setProducer('');doc.setCreator('');
+      setProgress(80,'Saving…');
+      const bytes=await doc.save({useObjectStreams:true});
+      const blob=new Blob([bytes],{type:'application/pdf'});
+      const url=URL.createObjectURL(blob);
+      downloadBtn.href=url;downloadBtn.download='compressed.pdf';
+      const newSize=bytes.length;
+      const reduction=Math.max(0,Math.round((1-newSize/origSize)*100));
+      savingsPct.textContent=reduction+'%';
+      sizeBefore.textContent=fmt(origSize);sizeAfter.textContent=fmt(newSize);
+      resultDesc.textContent=reduction>0?`Reduced by ${reduction}% — from ${fmt(origSize)} to ${fmt(newSize)}`:`File was already well-optimised (${fmt(origSize)})`;
+      setProgress(100,'Done!');progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('PDF compressed!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCR PDF Online Free — Extract Text from Scanned PDF | Toolenix</title>
+<meta name="description" content="Use OCR to extract text from scanned PDF documents. Free, browser-based OCR using Tesseract.js. No signup, no server upload.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/ocr-pdf.html">
+<meta property="og:title" content="OCR PDF Online Free — Extract Text from Scanned PDF | Toolenix">
+<meta property="og:description" content="Use OCR to extract text from scanned PDF documents. Free, browser-based OCR using Tesseract.js. No signup, no server upload.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"OCR PDF","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item"><a href="../index.html#popular-tools">PDF Tools</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">OCR PDF</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">PDF Tools</div>
+        <h1 class="tool-hero__title">OCR PDF</h1>
+        <p class="tool-hero__desc">Extract text from scanned PDF pages using OCR. Powered by Tesseract.js running in your browser — your file stays on your device.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0">
+    <input type="file" id="file-input" class="upload-area__input" accept=".pdf">
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop your scanned PDF here</div>
+    <p class="upload-area__hint">or click to browse</p>
+    <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+  </div>
+  <div id="options-section" style="display:none;margin-top:var(--space-5);">
+    <div class="file-item">
+      <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+      <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+    </div>
+    <div class="callout" style="margin-top:var(--space-4);">
+      <p>OCR runs in your browser using Tesseract.js. First-run downloads the language data (~9MB). Processing time depends on PDF size and your device speed.</p>
+    </div>
+    <div class="tool-controls tool-controls--end" style="margin-top:var(--space-4);">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="action-btn">Run OCR</button>
+    </div>
+  </div>
+</div>
+<div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+  <div class="tool-loading"><div class="spinner"></div>
+    <div class="progress-wrap" style="max-width:400px;width:100%;">
+      <div class="progress-header"><span class="progress-label" id="progress-label">Loading Tesseract…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;">
+  <div style="margin-bottom:var(--space-4);display:flex;align-items:center;justify-content:space-between;">
+    <h3 style="font-size:var(--text-base);font-weight:700;">Extracted Text</h3>
+    <button id="copy-btn" class="btn btn--secondary btn--sm">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy Text
+    </button>
+  </div>
+  <textarea id="ocr-output" class="text-result" readonly style="min-height:300px;" aria-label="OCR extracted text"></textarea>
+  <div class="tool-controls" style="margin-top:var(--space-4);">
+    <button class="btn btn--secondary" id="reset-btn">Process Another</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+      
+    <h2>What is OCR and when do you need it?</h2>
+    <p>Scanned PDFs are images — there's no selectable text layer. OCR (Optical Character Recognition) analyses each page image and identifies characters, reconstructing the text. Once extracted, you can copy, search, and reuse the content.</p>
+    <h2>Accuracy expectations</h2>
+    <ul>
+      <li>Clean, high-resolution scans (300 DPI+) with standard fonts: 95%+ accuracy</li>
+      <li>Low-resolution or skewed scans: accuracy drops significantly</li>
+      <li>Handwriting: Tesseract.js is not designed for handwriting recognition</li>
+      <li>Non-Latin scripts: accuracy varies by language — English is most reliable</li>
+    </ul>
+    <div class="callout">
+      <p>This tool extracts text from the first page for preview. For multi-page PDFs with full searchable PDF output, see our <a href="searchable-pdf.html" style="color:var(--clr-primary)">Searchable PDF</a> tool.</p>
+    </div>
+  
+    </div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools">
+        <a href="searchable-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Searchable PDF</span></a><a href="pdf-to-word.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">PDF to Word</span></a><a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+(function(){
+  if(typeof pdfjsLib!=='undefined') pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    actionBtn=document.getElementById('action-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),ocrOutput=document.getElementById('ocr-output'),
+    copyBtn=document.getElementById('copy-btn'),resetBtn=document.getElementById('reset-btn'),
+    progressFill=document.getElementById('progress-fill'),progressPct=document.getElementById('progress-pct'),
+    progressLabel=document.getElementById('progress-label');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setP(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function onFile(file){if(!file||!file.name.endsWith('.pdf')){window.Toolenix?.Toast.show('Please select a PDF.','warning');return;}currentFile=file;fname.textContent=file.name;fmeta.textContent=fmt(file.size);optionsSec.style.display='block';}
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>onFile(f[0])});
+  fileInput.addEventListener('change',()=>{onFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';ocrOutput.value='';});
+  copyBtn.addEventListener('click',()=>{window.Toolenix?.copyToClipboard(ocrOutput.value,copyBtn);});
+  actionBtn.addEventListener('click',async()=>{
+    if(!currentFile)return;
+    uploadSec.style.display='none';progressSec.style.display='block';setP(5,'Rendering PDF page…');
+    try{
+      const buf=await currentFile.arrayBuffer();
+      const pdf=await pdfjsLib.getDocument({data:buf}).promise;
+      const page=await pdf.getPage(1);
+      const vp=page.getViewport({scale:2});
+      const canvas=document.createElement('canvas');
+      canvas.width=vp.width;canvas.height=vp.height;
+      await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+      setP(30,'Loading Tesseract…');
+      const {createWorker}=Tesseract;
+      const worker=await createWorker('eng',1,{
+        logger:m=>{if(m.status==='recognizing text')setP(30+Math.round(m.progress*60),'Running OCR…');}
+      });
+      setP(35,'Running OCR on page 1…');
+      const {data:{text}}=await worker.recognize(canvas);
+      await worker.terminate();
+      ocrOutput.value=text.trim()||'No text detected. The PDF may be a low-quality scan or already have no readable text.';
+      setP(100,'Done!');
+      progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('OCR complete!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();</script>
+</body>
+</html>

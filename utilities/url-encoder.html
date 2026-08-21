@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Encoder Decoder Online Free | Toolenix | Toolenix</title>
+<meta name="description" content="Encode or decode URLs and query strings. Supports encodeURIComponent and encodeURI. Free browser-based URL encoder/decoder. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/url-encoder.html">
+<meta property="og:title" content="URL Encoder Decoder Online Free | Toolenix | Toolenix">
+<meta property="og:description" content="Encode or decode URLs and query strings. Supports encodeURIComponent and encodeURI. Free browser-based URL encoder/decoder. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"URL Encoder / Decoder","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">URL Encoder / Decoder</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">URL Encoder / Decoder</h1>
+        <p class="tool-hero__desc">Encode special characters in URLs for safe transmission, or decode percent-encoded URL strings back to readable text. Supports both encodeURI and encodeURIComponent.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-5);align-items:start;">
+  <div>
+    <label class="input-label" for="url-input">Input</label>
+    <textarea id="url-input" class="input-field textarea-field" style="min-height:200px;font-family:'Fira Code',monospace;font-size:0.82rem;" placeholder="URL or text to encode/decode…" aria-label="URL input"></textarea>
+    <div style="display:flex;gap:var(--space-2);margin-top:var(--space-3);flex-wrap:wrap;">
+      <button class="btn btn--primary btn--sm" id="encode-comp">Encode (Component)</button>
+      <button class="btn btn--secondary btn--sm" id="encode-uri">Encode (URI)</button>
+      <button class="btn btn--secondary btn--sm" id="decode-btn">Decode</button>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="url-output">Output</label>
+      <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy output">Copy</button>
+    </div>
+    <textarea id="url-output" class="input-field textarea-field" style="min-height:200px;font-family:'Fira Code',monospace;font-size:0.82rem;" readonly placeholder="Result appears here…" aria-label="URL output" aria-live="polite"></textarea>
+  </div>
+</div>
+<div id="url-error" role="alert" aria-live="assertive" style="display:none;margin-top:var(--space-3);padding:var(--space-3) var(--space-4);background:rgba(239,68,68,0.08);border-left:3px solid var(--clr-danger);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--clr-danger);"></div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>encodeURIComponent vs encodeURI</h2>
+<ul>
+  <li><strong>encodeURIComponent</strong> — encodes everything except letters, digits, and <code>- _ . ! ~ * ' ( )</code>. Use this for encoding individual query parameter <em>values</em> before inserting them into a URL string.</li>
+  <li><strong>encodeURI</strong> — encodes all characters except those that are valid URL structural characters: <code>: / ? # [ ] @ ! $ &amp; ' ( ) * + , ; =</code>. Use this for encoding a complete URL while preserving its structure.</li>
+</ul>
+<h2>When you need URL encoding</h2>
+<p>Any user-provided text that gets appended to a URL must be encoded. Spaces become <code>%20</code> (or <code>+</code> in form data), ampersands become <code>%26</code>, equals signs become <code>%3D</code>. Without encoding, these characters break URL parsing — a query string like <code>q=a&amp;b</code> would be interpreted as two parameters rather than one.</p>
+<h2>Decoding</h2>
+<p>This tool uses <code>decodeURIComponent</code> with <code>+</code>-to-space conversion for form-encoded input. If you receive a URL-encoded string from a form submission, the <code>+</code> character represents a space and must be converted before decoding percent sequences.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="base64-tool.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Base64 Tool</span></a><a href="hash-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Hash Generator</span></a><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const urlInput=document.getElementById('url-input'),
+    urlOutput=document.getElementById('url-output'),
+    copyBtn=document.getElementById('copy-btn'),
+    urlError=document.getElementById('url-error');
+
+  function clearError(){urlError.style.display='none';urlError.textContent='';}
+  function showError(msg){urlError.textContent=msg;urlError.style.display='block';}
+  function setOutput(v){urlOutput.value=v;clearError();}
+
+  document.getElementById('encode-comp').addEventListener('click',()=>{
+    try{setOutput(encodeURIComponent(urlInput.value));}
+    catch(e){showError('Encode error: '+e.message);}
+  });
+
+  document.getElementById('encode-uri').addEventListener('click',()=>{
+    try{setOutput(encodeURI(urlInput.value));}
+    catch(e){showError('Encode error: '+e.message);}
+  });
+
+  document.getElementById('decode-btn').addEventListener('click',()=>{
+    try{
+      const s=urlInput.value.replace(/\+/g,' ');
+      setOutput(decodeURIComponent(s));
+    }catch(e){showError('Invalid encoded string: '+e.message);}
+  });
+
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(urlOutput.value,copyBtn));
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Minifier Online Free — Minify CSS Stylesheets | Toolenix</title>
+<meta name="description" content="Minify CSS stylesheets to reduce file size. Removes whitespace, comments and redundant semicolons. Free browser-based CSS minifier. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/css-minifier.html">
+<meta property="og:title" content="CSS Minifier Online Free — Minify CSS Stylesheets | Toolenix">
+<meta property="og:description" content="Minify CSS stylesheets to reduce file size. Removes whitespace, comments and redundant semicolons. Free browser-based CSS minifier. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSS Minifier","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">CSS Minifier</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">CSS Minifier</h1>
+        <p class="tool-hero__desc">Minify CSS stylesheets by removing whitespace, comments, redundant semicolons, and zero units. Reduces file size for faster page loads.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-5);align-items:start;">
+  <div>
+    <label class="input-label" for="css-input">Input CSS</label>
+    <textarea id="css-input" class="input-field textarea-field" style="min-height:340px;font-family:'Fira Code',monospace;font-size:0.8rem;" placeholder="Paste your CSS here…" aria-label="CSS to minify"></textarea>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+      <label class="input-label" style="margin:0;" for="css-output">Minified Output</label>
+      <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy minified CSS">Copy</button>
+    </div>
+    <textarea id="css-output" class="input-field textarea-field" style="min-height:340px;font-family:'Fira Code',monospace;font-size:0.8rem;" readonly placeholder="Minified CSS appears here…" aria-label="Minified CSS output" aria-live="polite"></textarea>
+  </div>
+</div>
+<div class="tool-controls tool-controls--end" style="margin-top:var(--space-4);">
+  <button class="btn btn--primary" id="minify-btn">Minify CSS</button>
+</div>
+<div id="savings" aria-live="polite" style="display:none;margin-top:var(--space-3);font-size:var(--text-sm);color:var(--clr-success);font-weight:600;"></div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What CSS minification removes</h2>
+<ul>
+  <li><strong>Comments</strong> — <code>/* … */</code> blocks stripped entirely</li>
+  <li><strong>Whitespace</strong> — spaces around selectors, properties, colons, semicolons, and braces collapsed</li>
+  <li><strong>Trailing semicolons</strong> — the last <code>;</code> before a closing <code>}</code> is optional and can be removed</li>
+  <li><strong>Zero units</strong> — <code>0px</code>, <code>0em</code>, <code>0rem</code> etc. simplified to <code>0</code> — the unit is meaningless for zero values</li>
+</ul>
+<h2>Minification vs compression</h2>
+<p>These work at different levels and are complementary. Minification reduces the raw character count by removing unnecessary tokens. Compression (gzip or Brotli) then encodes patterns in the remaining content. Most web servers apply Brotli or gzip to CSS automatically. Minifying first gives the compressor less redundancy to work with, but because minification itself removes repeated whitespace tokens that compress well, the net gain is typically 5–15% additional reduction on top of compression alone.</p>
+<h2>When not to minify</h2>
+<p>Never minify files you intend to debug directly in DevTools. Use source maps in your build process — they let browsers display the original formatted CSS while serving the minified version to users. Minifying without source maps makes debugging significantly harder.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="html-minifier.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">HTML Minifier</span></a><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const cssInput=document.getElementById('css-input'),
+    cssOutput=document.getElementById('css-output'),
+    minifyBtn=document.getElementById('minify-btn'),
+    copyBtn=document.getElementById('copy-btn'),
+    savingsEl=document.getElementById('savings');
+
+  function minify(){
+    let css=cssInput.value;
+    if(!css.trim()) return;
+
+    css=css.replace(/\/\*[\s\S]*?\*\//g,'');   // remove comments
+    css=css.replace(/\s+/g,' ');                    // collapse whitespace
+    css=css.replace(/\s*([{}:;,>~+])\s*/g,'$1');  // remove space around syntax chars
+    css=css.replace(/;}/g,'}');                      // remove trailing semicolons
+    css=css.replace(/(:|\s)(0)(%|em|rem|px|pt|pc|ex|vw|vh|vmin|vmax|cm|mm|in)/g,'$10'); // zero units
+    css=css.replace(/\s*!\s*important/g,'!important');
+    css=css.trim();
+
+    cssOutput.value=css;
+    const orig=cssInput.value.length, min=css.length;
+    const saved=orig>0?Math.round((1-min/orig)*100):0;
+    savingsEl.textContent=`Reduced by ${saved}% — ${orig.toLocaleString()} → ${min.toLocaleString()} characters`;
+    savingsEl.style.display='block';
+  }
+
+  minifyBtn.addEventListener('click',minify);
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(cssOutput.value,copyBtn));
+
+  let debounce;
+  cssInput.addEventListener('input',()=>{
+    clearTimeout(debounce);
+    debounce=setTimeout(()=>{if(cssInput.value.trim()){minify();}else{cssOutput.value='';savingsEl.style.display='none';}},300);
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Converter Online Free — Convert Text to Any Case | Toolenix</title>
+<meta name="description" content="Convert text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case and more. Free, instant, browser-based.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/case-converter.html">
+<meta property="og:title" content="Case Converter Online Free — Convert Text to Any Case | Toolenix">
+<meta property="og:description" content="Convert text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case and more. Free, instant, browser-based.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Case Converter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Case Converter</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Text Tools</div>
+        <h1 class="tool-hero__title">Case Converter</h1>
+        <p class="tool-hero__desc">Convert text between uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, kebab-case and more — instantly.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="input-group">
+  <label class="input-label" for="cc-input">Input text</label>
+  <textarea id="cc-input" class="input-field textarea-field" style="min-height:140px;" placeholder="Type or paste your text here…" aria-label="Text to convert"></textarea>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5);" role="group" aria-label="Case conversion options">
+  <button class="btn btn--secondary btn--sm case-btn" data-case="upper">UPPERCASE</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="lower">lowercase</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="title">Title Case</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="sentence">Sentence case</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="camel">camelCase</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="pascal">PascalCase</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="snake">snake_case</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="kebab">kebab-case</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="constant">CONSTANT_CASE</button>
+  <button class="btn btn--secondary btn--sm case-btn" data-case="alternate">aLtErNaTe</button>
+</div>
+<div id="output-group" style="display:none;">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);">
+    <label class="input-label" style="margin:0;" id="result-label">Result</label>
+    <button class="btn btn--secondary btn--sm" id="copy-btn">Copy</button>
+  </div>
+  <textarea id="cc-output" class="input-field textarea-field" style="min-height:140px;" readonly aria-label="Converted text result" aria-labelledby="result-label"></textarea>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Case format reference</h2>
+<ul>
+  <li><strong>UPPERCASE</strong> — all characters capitalised. Used for headings, constants in code, acronyms, SHOUTING.</li>
+  <li><strong>lowercase</strong> — all characters lowercased. Used for email addresses, URLs, CSS property values.</li>
+  <li><strong>Title Case</strong> — first letter of each word capitalised. Used for headings, book titles, proper names.</li>
+  <li><strong>Sentence case</strong> — only the first word capitalised. Standard for prose, UI labels, and most body text.</li>
+  <li><strong>camelCase</strong> — words joined, each after the first capitalised. Standard for JavaScript variables and function names.</li>
+  <li><strong>PascalCase</strong> — like camelCase but first word also capitalised. Used for class names in JavaScript, Java, C#.</li>
+  <li><strong>snake_case</strong> — words joined with underscores, all lowercase. Standard in Python, SQL column names, file names in many projects.</li>
+  <li><strong>kebab-case</strong> — words joined with hyphens, all lowercase. Used in CSS class names, HTML attributes, URL slugs.</li>
+  <li><strong>CONSTANT_CASE</strong> — uppercase snake_case. Used for constants and environment variable names in most languages.</li>
+</ul></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="word-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Word Counter</span></a><a href="character-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Character Counter</span></a><a href="html-minifier.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">HTML Minifier</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const ccInput=document.getElementById('cc-input'),ccOutput=document.getElementById('cc-output'),
+    outputGroup=document.getElementById('output-group'),copyBtn=document.getElementById('copy-btn');
+  function toWords(s){
+    return s.trim()
+      .replace(/([a-z])([A-Z])/g,'$1 $2')
+      .replace(/[_\-]+/g,' ')
+      .replace(/\s+/g,' ')
+      .split(' ')
+      .filter(Boolean);
+  }
+  const transforms={
+    upper:s=>s.toUpperCase(),
+    lower:s=>s.toLowerCase(),
+    title:s=>toWords(s).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(' '),
+    sentence:s=>{const t=s.toLowerCase().trim();return t.charAt(0).toUpperCase()+t.slice(1);},
+    camel:s=>{const w=toWords(s);return w[0].toLowerCase()+w.slice(1).map(w2=>w2.charAt(0).toUpperCase()+w2.slice(1).toLowerCase()).join('');},
+    pascal:s=>toWords(s).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(''),
+    snake:s=>toWords(s).map(w=>w.toLowerCase()).join('_'),
+    kebab:s=>toWords(s).map(w=>w.toLowerCase()).join('-'),
+    constant:s=>toWords(s).map(w=>w.toUpperCase()).join('_'),
+    alternate:s=>s.split('').map((c,i)=>i%2===0?c.toLowerCase():c.toUpperCase()).join(''),
+  };
+  document.querySelectorAll('.case-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const text=ccInput.value;
+      if(!text){window.Toolenix?.Toast.show('Paste some text first.','warning');return;}
+      ccOutput.value=transforms[btn.dataset.case](text);
+      outputGroup.style.display='block';
+    });
+  });
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(ccOutput.value,copyBtn));
+
+})();
+</script>
+</body>
+</html>

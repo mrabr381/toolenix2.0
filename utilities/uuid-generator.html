@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UUID Generator Online Free — Generate Random UUID v4 | Toolenix</title>
+<meta name="description" content="Generate cryptographically random UUID v4 identifiers. Single or bulk generation. Free browser-based UUID generator using crypto.randomUUID(). No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/uuid-generator.html">
+<meta property="og:title" content="UUID Generator Online Free — Generate Random UUID v4 | Toolenix">
+<meta property="og:description" content="Generate cryptographically random UUID v4 identifiers. Single or bulk generation. Free browser-based UUID generator using crypto.randomUUID(). No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"UUID Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">UUID Generator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">UUID Generator</h1>
+        <p class="tool-hero__desc">Generate cryptographically random UUID v4 identifiers using the browser's native crypto.randomUUID(). Supports bulk generation and multiple format options.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="tool-settings">
+  <div class="tool-settings__field">
+    <label class="tool-settings__label" for="uuid-count">Quantity</label>
+    <select id="uuid-count" class="tool-settings__select">
+      <option value="1" selected>1 UUID</option>
+      <option value="5">5 UUIDs</option>
+      <option value="10">10 UUIDs</option>
+      <option value="25">25 UUIDs</option>
+      <option value="100">100 UUIDs</option>
+    </select>
+  </div>
+  <div class="tool-settings__field">
+    <label class="tool-settings__label" for="uuid-format">Format</label>
+    <select id="uuid-format" class="tool-settings__select">
+      <option value="standard" selected>Standard (with hyphens)</option>
+      <option value="no-hyphens">No hyphens</option>
+      <option value="uppercase">UPPERCASE</option>
+      <option value="braces">{With braces}</option>
+    </select>
+  </div>
+</div>
+<div class="tool-controls tool-controls--end">
+  <button class="btn btn--secondary" id="regen-btn" aria-label="Regenerate UUIDs">Regenerate</button>
+  <button class="btn btn--primary" id="gen-btn">Generate UUIDs</button>
+</div>
+<div id="result-section" style="display:none;margin-top:var(--space-6);">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+    <span style="font-weight:600;font-size:var(--text-sm);" id="result-count" aria-live="polite"></span>
+    <button class="btn btn--secondary btn--sm" id="copy-all" aria-label="Copy all UUIDs">Copy All</button>
+  </div>
+  <textarea id="uuid-output" class="input-field textarea-field" style="min-height:200px;font-family:'Fira Code',monospace;font-size:0.85rem;" readonly aria-label="Generated UUIDs"></textarea>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What is a UUID v4?</h2>
+<p>A UUID (Universally Unique Identifier) is a 128-bit identifier. Version 4 is randomly generated — 122 of the 128 bits are random, with 6 bits reserved to mark the version and variant. The standard representation is 32 hexadecimal characters split into five groups by hyphens: <code>xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx</code>.</p>
+<h2>Collision probability</h2>
+<p>The probability of generating two identical UUID v4s is astronomically small. To have a 50% probability of a single collision, you'd need to generate approximately 2.7 × 10¹⁸ UUIDs — roughly one billion UUIDs per second for 85 years. For all practical purposes, UUID v4 values are globally unique.</p>
+<h2>Common uses</h2>
+<ul>
+  <li><strong>Database primary keys</strong> — UUID keys work in distributed systems where auto-increment integers from a single sequence would cause conflicts</li>
+  <li><strong>API idempotency keys</strong> — prevent duplicate request processing in payment systems and critical APIs</li>
+  <li><strong>File names</strong> — guarantees unique filenames for uploaded assets without collision risk</li>
+  <li><strong>Session identifiers</strong> — random, unforgeable identifiers for user sessions</li>
+  <li><strong>Correlation IDs</strong> — trace a single request through distributed microservices logs</li>
+</ul>
+<div class="callout">
+  <p>Toolenix uses <code>crypto.randomUUID()</code> — a native browser function using cryptographically secure randomness. No library required, no network call needed.</p>
+</div></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="hash-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Hash Generator</span></a><a href="password-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-util"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Password Generator</span></a><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const genBtn=document.getElementById('gen-btn'),
+    regenBtn=document.getElementById('regen-btn'),
+    resultSec=document.getElementById('result-section'),
+    uuidOutput=document.getElementById('uuid-output'),
+    copyAll=document.getElementById('copy-all'),
+    resultCount=document.getElementById('result-count'),
+    countEl=document.getElementById('uuid-count'),
+    formatEl=document.getElementById('uuid-format');
+
+  function formatUUID(u, fmt){
+    switch(fmt){
+      case 'no-hyphens': return u.replace(/-/g,'');
+      case 'uppercase':  return u.toUpperCase();
+      case 'braces':     return '{'+u+'}';
+      default:           return u;
+    }
+  }
+
+  function generate(){
+    if(!crypto.randomUUID){
+      window.Toolenix?.Toast.show('crypto.randomUUID() not supported in this browser.','error');
+      return;
+    }
+    const count=parseInt(countEl.value);
+    const fmt=formatEl.value;
+    const uuids=Array.from({length:count},()=>formatUUID(crypto.randomUUID(),fmt));
+    uuidOutput.value=uuids.join('\n');
+    resultCount.textContent=count+' UUID'+(count>1?'s':'')+' generated';
+    resultSec.style.display='block';
+  }
+
+  genBtn.addEventListener('click',generate);
+  regenBtn.addEventListener('click',generate);
+  copyAll.addEventListener('click',()=>window.Toolenix?.copyToClipboard(uuidOutput.value,copyAll));
+  generate();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Validator Online Free — Validate JSON Syntax Instantly | Toolenix</title>
+<meta name="description" content="Validate JSON syntax and find errors with precise line information. Free browser-based JSON validator with real-time checking. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/json-validator.html">
+<meta property="og:title" content="JSON Validator Online Free — Validate JSON Syntax Instantly | Toolenix">
+<meta property="og:description" content="Validate JSON syntax and find errors with precise line information. Free browser-based JSON validator with real-time checking. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Validator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">JSON Validator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Developer Tools</div>
+        <h1 class="tool-hero__title">JSON Validator</h1>
+        <p class="tool-hero__desc">Validate JSON syntax in real time. Errors include precise position information. Also shows type, key count, and structure summary for valid JSON.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="input-group">
+  <label class="input-label" for="jv-input">Paste JSON to validate</label>
+  <textarea id="jv-input" class="input-field textarea-field" style="min-height:300px;font-family:'Fira Code',monospace;font-size:0.82rem;" placeholder='{"key":"value","array":[1,2,3],"nested":{"ok":true}}' aria-label="JSON to validate" aria-describedby="jv-status"></textarea>
+</div>
+<div id="jv-valid" role="status" aria-live="polite" style="display:none;margin-top:var(--space-4);padding:var(--space-4) var(--space-5);background:rgba(16,185,129,0.08);border-left:4px solid var(--clr-success);border-radius:var(--radius-lg);">
+  <div style="font-weight:700;color:var(--clr-success);margin-bottom:var(--space-2);">✓ Valid JSON</div>
+  <div id="jv-stats" style="font-size:var(--text-sm);color:var(--clr-text-2);"></div>
+</div>
+<div id="jv-invalid" role="alert" aria-live="assertive" style="display:none;margin-top:var(--space-4);padding:var(--space-4) var(--space-5);background:rgba(239,68,68,0.08);border-left:4px solid var(--clr-danger);border-radius:var(--radius-lg);">
+  <div style="font-weight:700;color:var(--clr-danger);margin-bottom:var(--space-2);">✗ Invalid JSON</div>
+  <div id="jv-error" style="font-size:var(--text-sm);color:var(--clr-danger);font-family:'Fira Code',monospace;"></div>
+</div>
+<div id="jv-empty" style="display:none;margin-top:var(--space-4);padding:var(--space-4) var(--space-5);background:var(--clr-surface-2);border-radius:var(--radius-lg);">
+  <div style="font-size:var(--text-sm);color:var(--clr-text-3);">Start typing or paste JSON above to validate it.</div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Common JSON syntax errors explained</h2>
+<ul>
+  <li><strong>Trailing commas</strong> — the most common mistake. <code>[1, 2, 3,]</code> and <code>{"a":1,"b":2,}</code> are both invalid. Trailing commas after the last item are not allowed.</li>
+  <li><strong>Single-quoted strings</strong> — JSON mandates double quotes. <code>{'name':'Ali'}</code> is not valid JSON, even though it works as a JavaScript object literal.</li>
+  <li><strong>Unquoted keys</strong> — <code>{name:"Ali"}</code> is JavaScript object notation, not JSON. All keys must be quoted strings.</li>
+  <li><strong>Comments</strong> — <code>// this</code> and <code>/* this */</code> are not valid inside JSON. Use JSONC format if you need comments in config files.</li>
+  <li><strong>undefined, NaN, Infinity</strong> — these JavaScript values have no JSON equivalent. They cannot appear in a JSON document.</li>
+  <li><strong>Unescaped control characters</strong> — raw newlines, tabs, and other control characters inside strings must be escaped: <code>\n</code>, <code>\t</code>, etc.</li>
+</ul>
+<h2>JSON vs JavaScript object literals</h2>
+<p>JSON is stricter than JavaScript object syntax. You can write a JavaScript object with unquoted keys, trailing commas, and single quotes — but none of those are valid JSON. When in doubt, always validate through a strict JSON parser like this tool before using JSON in an API, config file, or data pipeline.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="json-formatter.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">JSON Formatter</span></a><a href="base64-tool.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">Base64 Tool</span></a><a href="url-encoder.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">URL Encoder</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const jvInput=document.getElementById('jv-input'),
+    jvValid=document.getElementById('jv-valid'),
+    jvInvalid=document.getElementById('jv-invalid'),
+    jvEmpty=document.getElementById('jv-empty'),
+    jvStats=document.getElementById('jv-stats'),
+    jvError=document.getElementById('jv-error');
+
+  function describe(v){
+    if(Array.isArray(v)) return 'Array · '+v.length+' item'+(v.length!==1?'s':'');
+    if(v===null) return 'null';
+    if(typeof v==='object') return 'Object · '+Object.keys(v).length+' key'+(Object.keys(v).length!==1?'s':'');
+    return typeof v+' · '+JSON.stringify(v);
+  }
+
+  function validate(){
+    const text=jvInput.value.trim();
+    jvValid.style.display='none';
+    jvInvalid.style.display='none';
+    jvEmpty.style.display='none';
+
+    if(!text){jvEmpty.style.display='block';return;}
+
+    try{
+      const parsed=JSON.parse(text);
+      const chars=text.length.toLocaleString();
+      jvStats.textContent='Type: '+describe(parsed)+' · '+chars+' characters';
+      jvValid.style.display='block';
+    }catch(e){
+      jvError.textContent=e.message;
+      jvInvalid.style.display='block';
+    }
+  }
+
+  let debounce;
+  jvInput.addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(validate,250);});
+  validate();
+
+})();
+</script>
+</body>
+</html>

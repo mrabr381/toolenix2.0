@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robots.txt Generator Online Free | Toolenix | Toolenix</title>
+<meta name="description" content="Generate a robots.txt file to control search engine crawler access to your website. Free browser-based robots.txt generator with live preview.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/robots-txt.html">
+<meta property="og:title" content="Robots.txt Generator Online Free | Toolenix | Toolenix">
+<meta property="og:description" content="Generate a robots.txt file to control search engine crawler access to your website. Free browser-based robots.txt generator with live preview.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Robots.txt Generator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Robots.txt Generator</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">SEO Tools</div>
+        <h1 class="tool-hero__title">Robots.txt Generator</h1>
+        <p class="tool-hero__desc">Generate a robots.txt file to control which pages search engine crawlers can access. Add rules for specific bots or all crawlers, with live preview.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--2" style="gap:var(--space-8);align-items:start;">
+  <div>
+    <div class="input-group">
+      <label class="input-label" for="rb-sitemap">Sitemap URL <span style="color:var(--clr-text-3);font-size:0.75rem;">(optional)</span></label>
+      <input type="url" id="rb-sitemap" class="input-field" placeholder="https://example.com/sitemap.xml">
+    </div>
+    <div id="rules-list" aria-label="Crawler rules"></div>
+    <button class="btn btn--secondary btn--sm" id="add-rule" style="margin-top:var(--space-3);" aria-label="Add crawler rule">+ Add Rule</button>
+    <div class="tool-controls tool-controls--end" style="margin-top:var(--space-5);">
+      <button class="btn btn--primary" id="gen-btn">Generate robots.txt</button>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+      <label class="input-label" style="margin:0;" for="rb-output">Output</label>
+      <div style="display:flex;gap:var(--space-2);">
+        <button class="btn btn--ghost btn--sm" id="copy-btn" aria-label="Copy robots.txt">Copy</button>
+        <a id="download-btn" class="btn btn--secondary btn--sm" download="robots.txt" aria-label="Download robots.txt">Download</a>
+      </div>
+    </div>
+    <textarea id="rb-output" class="input-field textarea-field" style="min-height:360px;font-family:'Fira Code',monospace;font-size:0.85rem;" readonly placeholder="Click Generate robots.txt to preview…" aria-label="Generated robots.txt content" aria-live="polite"></textarea>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>What is robots.txt?</h2>
+<p>robots.txt is a plain text file at your domain root (<code>yourdomain.com/robots.txt</code>) that implements the Robots Exclusion Protocol. It tells well-behaved web crawlers which parts of your site to access and which to skip.</p>
+<h2>robots.txt syntax</h2>
+<ul>
+  <li><code>User-agent: *</code> — applies to all crawlers. Use a specific bot name (<code>Googlebot</code>, <code>Bingbot</code>, <code>GPTBot</code>) to target one crawler.</li>
+  <li><code>Disallow: /path/</code> — prevents crawling of this path and all paths below it.</li>
+  <li><code>Allow: /path/</code> — explicitly allows a path even within a broader Disallow. More specific rules take precedence.</li>
+  <li><code>Sitemap: https://…</code> — tells crawlers where your XML sitemap is located. Can appear multiple times.</li>
+  <li><code>Crawl-delay: N</code> — asks crawlers to wait N seconds between requests. Not supported by Googlebot.</li>
+</ul>
+<h2>Important limitations</h2>
+<div class="callout callout--warning">
+  <p><strong>robots.txt is not a security mechanism.</strong> It's a voluntary protocol. Malicious scrapers ignore it entirely. Sensitive content must be protected by authentication — not robots.txt. Additionally, Googlebot may still index a URL it can't crawl if it finds links to that URL elsewhere.</p>
+</div>
+<h2>Common patterns</h2>
+<ul>
+  <li><strong>Block all crawlers from admin areas</strong> — <code>Disallow: /admin/</code></li>
+  <li><strong>Block AI training crawlers</strong> — use <code>User-agent: GPTBot</code> / <code>Disallow: /</code> and similar rules for CCBot, Google-Extended, etc.</li>
+  <li><strong>Block duplicate content</strong> — <code>Disallow: /?sort=</code> to block URL parameters that create duplicate pages</li>
+</ul></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a><a href="url-encoder.html" class="related-tool-card"><div class="related-tool-card__icon icon-dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="related-tool-card__name">URL Encoder</span></a><a href="word-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Word Counter</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const rulesList=document.getElementById('rules-list'),
+    addRuleBtn=document.getElementById('add-rule'),
+    genBtn=document.getElementById('gen-btn'),
+    rbOutput=document.getElementById('rb-output'),
+    copyBtn=document.getElementById('copy-btn'),
+    downloadBtn=document.getElementById('download-btn'),
+    sitemapEl=document.getElementById('rb-sitemap');
+
+  let ruleId=0;
+
+  function addRule(agent='*', type='Disallow', path='/'){
+    ruleId++;
+    const id='rule-'+ruleId;
+    const div=document.createElement('div');
+    div.id=id;
+    div.style.cssText='padding:var(--space-4);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);margin-top:var(--space-3);';
+    div.innerHTML=`
+      <div style="display:flex;gap:var(--space-3);align-items:flex-end;flex-wrap:wrap;">
+        <div class="tool-settings__field" style="flex:1;min-width:110px;">
+          <label class="tool-settings__label">User-agent</label>
+          <input type="text" value="${agent}" class="tool-settings__input agent-input" placeholder="* or Googlebot" aria-label="User agent">
+        </div>
+        <div class="tool-settings__field" style="flex:0 0 110px;">
+          <label class="tool-settings__label">Directive</label>
+          <select class="tool-settings__select type-input" aria-label="Directive type">
+            <option value="Disallow"${type==='Disallow'?' selected':''}>Disallow</option>
+            <option value="Allow"${type==='Allow'?' selected':''}>Allow</option>
+          </select>
+        </div>
+        <div class="tool-settings__field" style="flex:2;min-width:160px;">
+          <label class="tool-settings__label">Path</label>
+          <input type="text" value="${path}" class="tool-settings__input path-input" placeholder="/admin/" aria-label="Path">
+        </div>
+        <button class="btn btn--ghost btn--sm remove-rule" data-id="${id}" style="flex-shrink:0;align-self:flex-end;" aria-label="Remove rule">Remove</button>
+      </div>`;
+    rulesList.appendChild(div);
+    div.querySelector('.remove-rule').addEventListener('click',()=>div.remove());
+  }
+
+  // Default rules
+  addRule('*','Disallow','/admin/');
+  addRule('*','Disallow','/private/');
+  addRule('Googlebot','Allow','/');
+
+  addRuleBtn.addEventListener('click',()=>addRule());
+
+  genBtn.addEventListener('click',()=>{
+    // Group rules by user-agent
+    const groups={};
+    rulesList.querySelectorAll('[id^="rule-"]').forEach(div=>{
+      const agent=(div.querySelector('.agent-input').value.trim()||'*');
+      const type=div.querySelector('.type-input').value;
+      const path=div.querySelector('.path-input').value.trim();
+      if(!path) return;
+      if(!groups[agent]) groups[agent]=[];
+      groups[agent].push(type+': '+path);
+    });
+
+    let txt='# robots.txt generated by Toolenix\n# https://toolenix.example.com/utilities/robots-txt.html\n';
+    txt+=('# Generated: '+new Date().toISOString().split('T')[0])+'\n\n';
+
+    Object.entries(groups).forEach(([agent,rules])=>{
+      txt+='User-agent: '+agent+'\n';
+      txt+=rules.join('\n')+'\n\n';
+    });
+
+    const sitemap=sitemapEl.value.trim();
+    if(sitemap) txt+='Sitemap: '+sitemap+'\n';
+
+    rbOutput.value=txt.trim();
+
+    const blob=new Blob([txt],{type:'text/plain'});
+    downloadBtn.href=URL.createObjectURL(blob);
+    window.Toolenix?.Toast.show('robots.txt generated!','success');
+  });
+
+  copyBtn.addEventListener('click',()=>window.Toolenix?.copyToClipboard(rbOutput.value,copyBtn));
+
+})();
+</script>
+</body>
+</html>

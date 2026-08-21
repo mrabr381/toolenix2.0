@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Counter Online Free — Count Characters with and without Spaces | Toolenix</title>
+<meta name="description" content="Count characters with and without spaces, words, lines and byte size in real time. Free browser-based character counter. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/character-counter.html">
+<meta property="og:title" content="Character Counter Online Free — Count Characters with and without Spaces | Toolenix">
+<meta property="og:description" content="Count characters with and without spaces, words, lines and byte size in real time. Free browser-based character counter. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Character Counter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Character Counter</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Text Tools</div>
+        <h1 class="tool-hero__title">Character Counter</h1>
+        <p class="tool-hero__desc">Count characters with and without spaces in real time. Also tracks word count, line count, and byte size — updates as you type.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div class="grid grid--4" style="margin-bottom:var(--space-5);" aria-live="polite">
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="cc-chars" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-primary);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Characters</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="cc-nospace" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-secondary);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">No Spaces</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="cc-words" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-accent);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Words</div>
+  </div>
+  <div style="padding:var(--space-5);background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-xl);text-align:center;">
+    <div id="cc-lines" style="font-size:var(--text-3xl);font-weight:800;color:var(--clr-success);line-height:1;">0</div>
+    <div style="font-size:var(--text-xs);color:var(--clr-text-3);margin-top:6px;font-weight:500;">Lines</div>
+  </div>
+</div>
+<div class="input-group">
+  <label class="input-label" for="cc-input">Type or paste your text</label>
+  <textarea id="cc-input" class="input-field textarea-field" style="min-height:250px;" placeholder="Paste or type text here…" aria-label="Text to count"></textarea>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:var(--space-3);">
+  <div style="font-size:var(--text-xs);color:var(--clr-text-3);" id="cc-bytes">0 bytes</div>
+  <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Characters with vs without spaces</h2>
+<p>Different platforms measure character limits differently. X (Twitter) counts every character including spaces. Some academic submission portals count characters without spaces. Legal documents often specify character limits excluding spaces. Toolenix shows both simultaneously so you can meet any requirement without switching tools.</p>
+<h2>Byte count and why it matters</h2>
+<p>For ASCII text (standard English characters), 1 character = 1 byte. For Unicode text containing emoji, accented characters, Chinese/Japanese/Korean characters, or other non-Latin scripts, each character uses 2–4 bytes. The byte count is what matters for database VARCHAR field limits, file size calculations, and API payload limits.</p>
+<h2>Line count</h2>
+<p>Line count is useful for code files, configuration files, and any context where the number of newlines matters — such as CSV rows, log file entries, or multi-line form fields with line limits.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="word-counter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><span class="related-tool-card__name">Word Counter</span></a><a href="case-converter.html" class="related-tool-card"><div class="related-tool-card__icon icon-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Case Converter</span></a><a href="meta-tag-generator.html" class="related-tool-card"><div class="related-tool-card__icon icon-seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div><span class="related-tool-card__name">Meta Tag Generator</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const ccInput=document.getElementById('cc-input'),clearBtn=document.getElementById('clear-btn'),
+    ccChars=document.getElementById('cc-chars'),ccNoSpace=document.getElementById('cc-nospace'),
+    ccWords=document.getElementById('cc-words'),ccLines=document.getElementById('cc-lines'),ccBytes=document.getElementById('cc-bytes');
+  function update(){
+    const t=ccInput.value;
+    ccChars.textContent=t.length.toLocaleString();
+    ccNoSpace.textContent=t.replace(/\s/g,'').length.toLocaleString();
+    ccWords.textContent=(t.trim()?t.trim().split(/\s+/).length:0).toLocaleString();
+    ccLines.textContent=(t?t.split('\n').length:0).toLocaleString();
+    const bytes=new Blob([t]).size;
+    ccBytes.textContent=bytes.toLocaleString()+' bytes ('+(bytes/1024).toFixed(2)+' KB)';
+  }
+  ccInput.addEventListener('input',update);
+  clearBtn.addEventListener('click',()=>{ccInput.value='';update();});
+
+})();
+</script>
+</body>
+</html>

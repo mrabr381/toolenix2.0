@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Converter Online Free — Convert JPG PNG WebP GIF | Toolenix</title>
+<meta name="description" content="Convert images between JPG, PNG, WebP and GIF formats online. Free browser-based image converter. No signup, no server upload.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/image-converter.html">
+<meta property="og:title" content="Image Converter Online Free — Convert JPG PNG WebP GIF | Toolenix">
+<meta property="og:description" content="Convert images between JPG, PNG, WebP and GIF formats online. Free browser-based image converter. No signup, no server upload.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Converter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Image Converter</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Image Tools</div>
+        <h1 class="tool-hero__title">Image Converter</h1>
+        <p class="tool-hero__desc">Convert images between JPG, PNG, WebP and GIF formats. Upload, choose your output format, and download — all processed in your browser.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0" aria-label="Upload images">
+    <input type="file" id="file-input" class="upload-area__input" accept="image/*" multiple aria-label="Select images">
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop images here</div>
+    <p class="upload-area__hint">Any image format — select multiple</p>
+  </div>
+  <div id="options" style="display:none;margin-top:var(--space-5);">
+    <div class="tool-settings">
+      <div class="tool-settings__field">
+        <label class="tool-settings__label" for="out-format">Convert to</label>
+        <select id="out-format" class="tool-settings__select">
+          <option value="image/jpeg">JPG</option>
+          <option value="image/png" selected>PNG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+      </div>
+      <div class="tool-settings__field" id="quality-field">
+        <label class="tool-settings__label">Quality: <strong id="q-val">90</strong>%</label>
+        <div class="range-wrap">
+          <input type="range" id="quality" class="range-slider" min="10" max="100" value="90" aria-label="Output quality">
+          <span class="range-value" id="q-display">90%</span>
+        </div>
+      </div>
+    </div>
+    <div id="file-list" class="file-list"></div>
+    <div class="tool-controls tool-controls--end">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="convert-btn">Convert Images</button>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;margin-top:var(--space-5);">
+  <div style="font-weight:700;margin-bottom:var(--space-4);">Converted Images</div>
+  <div id="result-list" class="file-list"></div>
+  <div class="tool-controls" style="margin-top:var(--space-5);">
+    <button class="btn btn--secondary" id="reset-btn">Convert More</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Format comparison</h2>
+<ul>
+  <li><strong>JPG</strong> — Lossy compression. Best for photographs and complex images. Smallest file size. Does not support transparency.</li>
+  <li><strong>PNG</strong> — Lossless. Best for screenshots, logos, and images requiring transparency. Larger file sizes for photos.</li>
+  <li><strong>WebP</strong> — Google's modern format. 25–35% smaller than JPG/PNG at equivalent quality. Supports both lossy and lossless. All modern browsers support it.</li>
+</ul>
+<h2>Transparency handling</h2>
+<p>PNG and WebP support transparent backgrounds. If you convert a transparent PNG to JPG, the transparent area becomes white — JPG does not support an alpha channel. To preserve transparency, convert to PNG or WebP.</p>
+<h2>When to use each format</h2>
+<ul>
+  <li><strong>Photographs for web</strong> → WebP (best compression) or JPG (broadest compatibility)</li>
+  <li><strong>Logos and UI elements</strong> → PNG (transparency) or WebP</li>
+  <li><strong>Screenshots</strong> → PNG (lossless, sharp text)</li>
+  <li><strong>Email images</strong> → JPG (broadest client support)</li>
+</ul></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a><a href="image-resizer.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Resizer</span></a><a href="../pdf/png-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">PNG to PDF</span></a><a href="../pdf/jpg-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">JPG to PDF</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    options=document.getElementById('options'),outFormat=document.getElementById('out-format'),
+    qualityEl=document.getElementById('quality'),qVal=document.getElementById('q-val'),qDisplay=document.getElementById('q-display'),
+    qField=document.getElementById('quality-field'),fileListEl=document.getElementById('file-list'),
+    convertBtn=document.getElementById('convert-btn'),clearBtn=document.getElementById('clear-btn'),
+    resultSec=document.getElementById('result-section'),resultList=document.getElementById('result-list'),resetBtn=document.getElementById('reset-btn');
+  let files=[];
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  qualityEl.addEventListener('input',()=>{qVal.textContent=qualityEl.value;qDisplay.textContent=qualityEl.value+'%';});
+  outFormat.addEventListener('change',()=>{qField.style.display=outFormat.value==='image/png'?'none':'block';});
+  function renderList(){
+    fileListEl.innerHTML=files.map((f,i)=>`
+      <div class="file-item">
+        <div class="file-item__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="file-item__info"><div class="file-item__name">${f.name}</div><div class="file-item__meta">${fmt(f.size)}</div></div>
+        <button class="file-item__remove" data-i="${i}" aria-label="Remove ${f.name}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>`).join('');
+    fileListEl.querySelectorAll('[data-i]').forEach(b=>b.addEventListener('click',()=>{files.splice(+b.dataset.i,1);renderList();if(!files.length)options.style.display='none';}));
+  }
+  function addFiles(newFiles){
+    files=[...files,...Array.from(newFiles).filter(f=>f.type.startsWith('image/'))];
+    if(!files.length)return;renderList();options.style.display='block';
+  }
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'image/*',multiple:true,onFiles:addFiles});
+  fileInput.addEventListener('change',()=>{addFiles(fileInput.files);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{files=[];renderList();options.style.display='none';});
+  resetBtn.addEventListener('click',()=>{files=[];renderList();options.style.display='none';resultSec.style.display='none';});
+  convertBtn.addEventListener('click',async()=>{
+    if(!files.length)return;
+    const mime=outFormat.value;const q=parseInt(qualityEl.value)/100;
+    const extMap={'image/png':'png','image/webp':'webp','image/jpeg':'jpg'};
+    const ext=extMap[mime]||'jpg';
+    convertBtn.disabled=true;convertBtn.textContent='Converting…';
+    try{
+      const rows=[];
+      for(const f of files){
+        const url=URL.createObjectURL(f);
+        const img=await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.src=url;});
+        const canvas=document.createElement('canvas');
+        canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;
+        const ctx=canvas.getContext('2d');
+        if(mime==='image/jpeg'){ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);}
+        ctx.drawImage(img,0,0);
+        URL.revokeObjectURL(url);
+        const blob=await new Promise(res=>canvas.toBlob(res,mime,q));
+        const outName=f.name.replace(/\.[^.]+$/,'.'+ext);
+        rows.push({name:outName,url:URL.createObjectURL(blob),size:blob.size,origSize:f.size});
+      }
+      resultList.innerHTML=rows.map(r=>`
+        <div class="file-item">
+          <div class="file-item__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+          <div class="file-item__info"><div class="file-item__name">${r.name}</div><div class="file-item__meta">${fmt(r.origSize)} → ${fmt(r.size)}</div></div>
+          <a href="${r.url}" download="${r.name}" class="btn btn--primary btn--sm">Save</a>
+        </div>`).join('');
+      resultSec.style.display='block';window.Toolenix?.Toast.show('Conversion complete!','success');
+    }catch(err){window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+    convertBtn.disabled=false;convertBtn.textContent='Convert Images';
+  });
+
+})();
+</script>
+</body>
+</html>

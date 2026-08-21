@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer Online Free — Resize Images to Any Size | Toolenix</title>
+<meta name="description" content="Resize images to exact pixel dimensions or scale by percentage. Free browser-based image resizer. Supports JPG, PNG, WebP. No signup.">
+<link rel="canonical" href="https://toolenix.example.com/utilities/image-resizer.html">
+<meta property="og:title" content="Image Resizer Online Free — Resize Images to Any Size | Toolenix">
+<meta property="og:description" content="Resize images to exact pixel dimensions or scale by percentage. Free browser-based image resizer. Supports JPG, PNG, WebP. No signup.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Resizer","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">Image Resizer</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">Image Tools</div>
+        <h1 class="tool-hero__title">Image Resizer</h1>
+        <p class="tool-hero__desc">Resize images to exact pixel dimensions or scale by percentage. Supports JPG, PNG and WebP — all processed in your browser, nothing uploaded.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">Browser-based</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0" aria-label="Upload image">
+    <input type="file" id="file-input" class="upload-area__input" accept="image/*" aria-label="Select image">
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop an image here</div>
+    <p class="upload-area__hint">JPG, PNG, WebP, GIF</p>
+  </div>
+  <div id="options" style="display:none;margin-top:var(--space-5);">
+    <div class="file-item">
+      <div class="file-item__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+      <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+    </div>
+    <div class="tool-settings" style="margin-top:var(--space-4);">
+      <div class="tool-settings__field">
+        <label class="tool-settings__label" for="mode">Resize mode</label>
+        <select id="mode" class="tool-settings__select">
+          <option value="pixels">Pixels (exact dimensions)</option>
+          <option value="percent">Percentage</option>
+        </select>
+      </div>
+      <div class="tool-settings__field" id="px-fields">
+        <label class="tool-settings__label">Width × Height (px)</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input type="number" id="width-input" class="tool-settings__input" placeholder="Width" min="1" aria-label="Width in pixels">
+          <span style="color:var(--clr-text-3);flex-shrink:0;">×</span>
+          <input type="number" id="height-input" class="tool-settings__input" placeholder="Height" min="1" aria-label="Height in pixels">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:var(--text-sm);cursor:pointer;">
+          <input type="checkbox" id="lock-ratio" checked style="accent-color:var(--clr-primary);width:16px;height:16px;" aria-label="Lock aspect ratio">
+          Lock aspect ratio
+        </label>
+      </div>
+      <div class="tool-settings__field" id="pct-field" style="display:none;">
+        <label class="tool-settings__label">Scale: <strong id="pct-val">50</strong>%</label>
+        <div class="range-wrap">
+          <input type="range" id="pct" class="range-slider" min="1" max="200" value="50" aria-label="Scale percentage">
+          <span class="range-value" id="pct-display">50%</span>
+        </div>
+      </div>
+    </div>
+    <div class="tool-controls tool-controls--end">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="resize-btn">Resize Image</button>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;margin-top:var(--space-5);">
+  <div class="result-area">
+    <div class="result-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="result-area__title">Image resized!</div>
+    <p class="result-area__desc" id="result-desc"></p>
+    <div class="result-area__actions">
+      <a id="download-btn" class="btn btn--primary btn--lg" download>Save Image</a>
+      <button class="btn btn--secondary" id="reset-btn">Resize Another</button>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+<h2>Pixels vs percentage resizing</h2>
+<ul>
+  <li><strong>Pixel dimensions</strong> — exact control. Useful when a platform requires a specific resolution (e.g. 1200×630 for Open Graph images, 1080×1080 for Instagram, 800×200 for email banners).</li>
+  <li><strong>Percentage scaling</strong> — proportional reduction or enlargement. 50% halves the image in both dimensions. 200% doubles it.</li>
+</ul>
+<h2>Common image size requirements</h2>
+<ul>
+  <li><strong>Open Graph / Facebook share image</strong> — 1200×630px</li>
+  <li><strong>Twitter / X card image</strong> — 1200×628px</li>
+  <li><strong>Instagram post</strong> — 1080×1080px (square), 1080×1350px (portrait)</li>
+  <li><strong>YouTube thumbnail</strong> — 1280×720px</li>
+  <li><strong>LinkedIn banner</strong> — 1584×396px</li>
+</ul>
+<h2>Quality note</h2>
+<p>Resized images are exported as JPEG at 92% quality. For PNG output, use our <a href="image-converter.html" style="color:var(--clr-primary)">Image Converter</a> to convert the resized JPEG to PNG afterward.</p></div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools"><a href="image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a><a href="image-converter.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Image Converter</span></a><a href="background-remover.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></div><span class="related-tool-card__name">Background Remover</span></a><a href="../pdf/jpg-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><span class="related-tool-card__name">JPG to PDF</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+
+<script>
+(function(){
+
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    options=document.getElementById('options'),fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    modeEl=document.getElementById('mode'),pxFields=document.getElementById('px-fields'),pctField=document.getElementById('pct-field'),
+    widthEl=document.getElementById('width-input'),heightEl=document.getElementById('height-input'),
+    lockEl=document.getElementById('lock-ratio'),pctEl=document.getElementById('pct'),
+    pctVal=document.getElementById('pct-val'),pctDisplay=document.getElementById('pct-display'),
+    resizeBtn=document.getElementById('resize-btn'),clearBtn=document.getElementById('clear-btn'),
+    resultSec=document.getElementById('result-section'),downloadBtn=document.getElementById('download-btn'),
+    resetBtn=document.getElementById('reset-btn'),resultDesc=document.getElementById('result-desc');
+  let currentFile=null,origW=0,origH=0,ratio=1;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function onFile(file){
+    if(!file||!file.type.startsWith('image/')){window.Toolenix?.Toast.show('Please select an image file.','warning');return;}
+    currentFile=file;
+    const url=URL.createObjectURL(file);
+    const img=new Image();
+    img.onload=()=>{
+      origW=img.naturalWidth;origH=img.naturalHeight;ratio=origW/origH;
+      fname.textContent=file.name;
+      fmeta.textContent=`${fmt(file.size)} · ${origW}×${origH}px`;
+      widthEl.value=origW;heightEl.value=origH;
+      options.style.display='block';URL.revokeObjectURL(url);
+    };img.src=url;
+  }
+  modeEl.addEventListener('change',()=>{
+    pxFields.style.display=modeEl.value==='pixels'?'block':'none';
+    pctField.style.display=modeEl.value==='percent'?'block':'none';
+  });
+  pctEl.addEventListener('input',()=>{pctVal.textContent=pctEl.value;pctDisplay.textContent=pctEl.value+'%';});
+  widthEl.addEventListener('input',()=>{if(lockEl.checked&&origH)heightEl.value=Math.round(parseInt(widthEl.value||0)/ratio);});
+  heightEl.addEventListener('input',()=>{if(lockEl.checked&&origW)widthEl.value=Math.round(parseInt(heightEl.value||0)*ratio);});
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'image/*',multiple:false,onFiles:f=>onFile(f[0])});
+  fileInput.addEventListener('change',()=>{onFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;options.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;options.style.display='none';resultSec.style.display='none';});
+  resizeBtn.addEventListener('click',()=>{
+    if(!currentFile)return;
+    let w,h;
+    if(modeEl.value==='percent'){const p=parseInt(pctEl.value)/100;w=Math.round(origW*p);h=Math.round(origH*p);}
+    else{w=parseInt(widthEl.value)||origW;h=parseInt(heightEl.value)||origH;}
+    if(w<1||h<1){window.Toolenix?.Toast.show('Invalid dimensions.','warning');return;}
+    const url=URL.createObjectURL(currentFile);
+    const img=new Image();
+    img.onload=()=>{
+      const canvas=document.createElement('canvas');
+      canvas.width=w;canvas.height=h;
+      canvas.getContext('2d').drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(blob=>{
+        if(!blob){window.Toolenix?.Toast.show('Resize failed.','error');return;}
+        downloadBtn.href=URL.createObjectURL(blob);
+        downloadBtn.download=currentFile.name.replace(/\.[^.]+$/,'')+'_resized.jpg';
+        resultDesc.textContent=`${origW}×${origH}px → ${w}×${h}px`;
+        resultSec.style.display='block';
+        window.Toolenix?.Toast.show('Image resized!','success');
+      },'image/jpeg',0.92);
+    };img.src=url;
+  });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF to JPG Online Free — Convert PDF Pages to Images | Toolenix</title>
+<meta name="description" content="Convert each PDF page to a high-quality JPG image. Free, browser-based PDF to JPG converter. Uses PDF.js — no server upload.">
+<link rel="canonical" href="https://toolenix.example.com/pdf/pdf-to-jpg.html">
+<meta property="og:title" content="PDF to JPG Online Free — Convert PDF Pages to Images | Toolenix">
+<meta property="og:description" content="Convert each PDF page to a high-quality JPG image. Free, browser-based PDF to JPG converter. Uses PDF.js — no server upload.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F6EF7">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF to JPG","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../assets/js/theme.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="page-wrapper">
+<main id="main-content">
+
+<div class="tool-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb__item"><a href="../index.html">Home</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item"><a href="../index.html#popular-tools">PDF Tools</a></div>
+      <svg class="breadcrumb__sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <div class="breadcrumb__item current">PDF to JPG</div>
+    </nav>
+    <div class="tool-hero__inner">
+      <div class="tool-hero__icon icon-pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="tool-hero__content">
+        <div class="tool-hero__label">PDF Tools</div>
+        <h1 class="tool-hero__title">PDF to JPG</h1>
+        <p class="tool-hero__desc">Convert every PDF page into a JPG image. Powered by PDF.js — rendered entirely in your browser at your chosen quality and scale.</p>
+        <div class="tool-hero__tags">
+          <span class="badge badge--success">Free</span>
+          <span class="badge badge--primary">No signup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-interface">
+  <div class="container">
+    <div class="tool-interface__panel">
+      
+<div id="upload-section">
+  <div class="upload-area" id="upload-area" role="button" tabindex="0">
+    <input type="file" id="file-input" class="upload-area__input" accept=".pdf">
+    <div class="upload-area__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+    <div class="upload-area__title">Drop your PDF here</div>
+    <p class="upload-area__hint">or click to browse</p>
+    <div class="upload-area__formats"><span class="badge badge--primary">PDF</span></div>
+  </div>
+  <div id="options-section" style="display:none;margin-top:var(--space-5);">
+    <div class="file-item">
+      <div class="file-item__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+      <div class="file-item__info"><div class="file-item__name" id="fname"></div><div class="file-item__meta" id="fmeta"></div></div>
+    </div>
+    <div class="tool-settings" style="margin-top:var(--space-4);">
+      <div class="tool-settings__field">
+        <label class="tool-settings__label">Quality</label>
+        <select id="quality-sel" class="tool-settings__select">
+          <option value="0.95">High (95%)</option>
+          <option value="0.85" selected>Medium (85%)</option>
+          <option value="0.70">Low (70%)</option>
+        </select>
+      </div>
+      <div class="tool-settings__field">
+        <label class="tool-settings__label">Resolution scale</label>
+        <select id="scale-sel" class="tool-settings__select">
+          <option value="2">2x — High DPI</option>
+          <option value="1.5" selected>1.5x — Standard</option>
+          <option value="1">1x — Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="tool-controls tool-controls--end">
+      <button class="btn btn--ghost btn--sm" id="clear-btn">Clear</button>
+      <button class="btn btn--primary" id="action-btn">Convert to JPG</button>
+    </div>
+  </div>
+</div>
+<div id="progress-section" style="display:none;padding:var(--space-8) 0;">
+  <div class="tool-loading"><div class="spinner"></div>
+    <div class="progress-wrap" style="max-width:400px;width:100%;">
+      <div class="progress-header"><span class="progress-label" id="progress-label">Rendering…</span><span class="progress-pct" id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-bar__fill" id="progress-fill"></div></div>
+    </div>
+  </div>
+</div>
+<div id="result-section" style="display:none;">
+  <div style="text-align:center;margin-bottom:var(--space-6);">
+    <h3 style="font-size:var(--text-xl);font-weight:700;">Conversion complete!</h3>
+    <p class="text-muted" id="result-desc" style="margin-top:var(--space-2);"></p>
+  </div>
+  <div id="image-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-4);"></div>
+  <div style="text-align:center;margin-top:var(--space-6);">
+    <button class="btn btn--secondary" id="reset-btn">Convert Another</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="section section--sm">
+  <div class="container">
+    <div class="tool-content">
+      
+    <h2>How PDF to JPG conversion works</h2>
+    <p>PDF.js renders each page onto an HTML Canvas at your chosen scale, then exports the canvas as a JPEG at your chosen quality level. Higher scale produces sharper images suitable for print. Lower scale produces smaller files for web use.</p>
+    <h2>Scale and quality guide</h2>
+    <ul>
+      <li><strong>2x scale, 95% quality</strong> — best for printing or archiving; largest file size</li>
+      <li><strong>1.5x scale, 85% quality</strong> — good balance for sharing and web use</li>
+      <li><strong>1x scale, 70% quality</strong> — smallest output; suitable for thumbnails</li>
+    </ul>
+    <h2>Common use cases</h2>
+    <p>Extracting images from PDF for web publishing, creating thumbnails from document pages, converting PDF slides to image format for social media, or making non-editable image versions of sensitive documents.</p>
+  
+    </div>
+    <div style="margin-top:var(--space-10);">
+      <h3 style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-5);">Related tools</h3>
+      <div class="related-tools">
+        <a href="jpg-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">JPG to PDF</span></a><a href="png-to-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">PNG to PDF</span></a><a href="merge-pdf.html" class="related-tool-card"><div class="related-tool-card__icon icon-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Merge PDF</span></a><a href="../utilities/image-compressor.html" class="related-tool-card"><div class="related-tool-card__icon icon-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="related-tool-card__name">Image Compressor</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  if(typeof pdfjsLib!=='undefined') pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  const uploadArea=document.getElementById('upload-area'),fileInput=document.getElementById('file-input'),
+    optionsSec=document.getElementById('options-section'),fname=document.getElementById('fname'),fmeta=document.getElementById('fmeta'),
+    actionBtn=document.getElementById('action-btn'),clearBtn=document.getElementById('clear-btn'),
+    progressSec=document.getElementById('progress-section'),uploadSec=document.getElementById('upload-section'),
+    resultSec=document.getElementById('result-section'),imageGrid=document.getElementById('image-grid'),
+    resetBtn=document.getElementById('reset-btn'),progressFill=document.getElementById('progress-fill'),
+    progressPct=document.getElementById('progress-pct'),progressLabel=document.getElementById('progress-label'),
+    resultDesc=document.getElementById('result-desc');
+  let currentFile=null;
+  function fmt(b){const k=1024,s=['B','KB','MB','GB'],i=Math.floor(Math.log(b)/Math.log(k));return(b/Math.pow(k,i)).toFixed(1)+' '+s[i];}
+  function setP(p,l){progressFill.style.width=p+'%';progressPct.textContent=p+'%';if(l)progressLabel.textContent=l;}
+  function onFile(f){if(!f||!f.name.endsWith('.pdf')){window.Toolenix?.Toast.show('Please select a PDF.','warning');return;}currentFile=f;fname.textContent=f.name;fmeta.textContent=fmt(f.size);optionsSec.style.display='block';}
+  window.Toolenix?.initUploadArea(uploadArea,fileInput,{accept:'.pdf',multiple:false,onFiles:f=>onFile(f[0])});
+  fileInput.addEventListener('change',()=>{onFile(fileInput.files[0]);fileInput.value='';});
+  clearBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';});
+  resetBtn.addEventListener('click',()=>{currentFile=null;optionsSec.style.display='none';resultSec.style.display='none';uploadSec.style.display='block';imageGrid.innerHTML='';});
+  actionBtn.addEventListener('click',async()=>{
+    if(!currentFile)return;
+    const quality=parseFloat(document.getElementById('quality-sel').value);
+    const scale=parseFloat(document.getElementById('scale-sel').value);
+    uploadSec.style.display='none';progressSec.style.display='block';setP(5,'Loading PDF…');
+    try{
+      const buf=await currentFile.arrayBuffer();
+      const pdf=await pdfjsLib.getDocument({data:buf}).promise;
+      const total=pdf.numPages;
+      imageGrid.innerHTML='';
+      for(let i=1;i<=total;i++){
+        setP(Math.round(5+90*(i/total)),`Rendering page ${i} of ${total}…`);
+        const pg=await pdf.getPage(i);
+        const vp=pg.getViewport({scale});
+        const canvas=document.createElement('canvas');
+        canvas.width=vp.width;canvas.height=vp.height;
+        await pg.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+        const dataUrl=canvas.toDataURL('image/jpeg',quality);
+        const card=document.createElement('div');
+        card.style.cssText='border:1px solid var(--clr-border);border-radius:var(--radius-lg);overflow:hidden;background:var(--clr-surface);';
+        const img=document.createElement('img');
+        img.src=dataUrl;img.style.cssText='width:100%;display:block;';img.alt='Page '+i;
+        const foot=document.createElement('div');
+        foot.style.cssText='padding:8px 10px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--clr-border);';
+        foot.innerHTML='<span style="font-size:0.75rem;color:var(--clr-text-3)">Page '+i+'</span>';
+        const dl=document.createElement('a');
+        dl.href=dataUrl;dl.download='page-'+i+'.jpg';dl.className='btn btn--primary btn--sm';dl.textContent='Save';
+        foot.appendChild(dl);card.appendChild(img);card.appendChild(foot);
+        imageGrid.appendChild(card);
+      }
+      setP(100,'Done!');
+      resultDesc.textContent=total+' page'+(total>1?'s':'')+' converted';
+      progressSec.style.display='none';resultSec.style.display='block';
+      window.Toolenix?.Toast.show('Conversion complete!','success');
+    }catch(err){progressSec.style.display='none';uploadSec.style.display='block';window.Toolenix?.Toast.show('Error: '+err.message,'error');}
+  });
+})();</script>
+</body>
+</html>
